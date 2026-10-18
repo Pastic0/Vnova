@@ -1,0 +1,42 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chính - Vnova</title>
+    <link rel="icon" data-site-logo />
+
+
+    <link rel="stylesheet" href="/css/main_site_style.css" />
+    <link rel="stylesheet" href="/css/vnova_nav_contact.css?v=2026-07-27-restore-action-icons-v1" />
+<link rel="stylesheet" href="/css/vnova_font.css?v=2026-10-18-chatbot-rename-v1" />
+<link rel="stylesheet" href="/css/home_landing_polish.css?v=2026-10-10-arc-rail-v18" />
+  <script defer src="/script/site_branding.js?v=2026-08-05-uploaded-logo-only-v6"></script>
+</head>
+  <body>
+    @await Html.PartialAsync("~/Views/Shared/_VnovaFloatingTools.cshtml")
+    <div class="background-slider"></div>
+
+    @await Html.PartialAsync("~/Views/Shared/_VnovaNav.cshtml", "")
+
+    <main class="content">
+      <div class="hero-text">
+        <h1>Khám phá Việt Nam</h1>
+        <h2>theo cách riêng của bạn</h2>
+        <p>Vnova giúp bạn tìm điểm đến, xem bản đồ 34 tỉnh thành, lập lịch trình, quản lý kế hoạch và kết nối hỗ trợ trong cùng một giao diện hiện đại.</p>
+        <div class="main-hero-actions">
+          <a href="/provinces" class="detail-btn">Xem bản đồ 34 tỉnh thành</a>
+          <a href="#" class="detail-btn" data-pricing-trigger>Xem bảng giá</a>
+        </div>
+      </div>
+    </main>
+    <script src="/script/accounts.js?v=2026-10-18-idle-1h-v1"></script>
+    <script src="/script/main_site_script.js?v=2026-07-01-clean-v1"></script>
+    <script src="/script/vnova_notification_panel.js?v=2026-07-28-admin-recipient-v2"></script>
+<script src="/script/theme_toggle.js?v=2026-07-27-notification-cleanup-v3"></script>
+</body>
+</html>
+
