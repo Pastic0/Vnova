@@ -565,7 +565,7 @@ function setAiSuggestionButtonsDisabled(disabled) {
 function syncMessagingMobileViewport() {
   const header = document.querySelector("body.messaging-page > header");
   const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
-  document.documentElement.style.setProperty("--VNN-mobile-header-height", `${headerHeight}px`);
+  document.documentElement.style.setProperty("--twai-mobile-header-height", `${headerHeight}px`);
 }
 
 function setMobileConversationOpenState(isOpen) {

@@ -1219,7 +1219,7 @@ function showInfoPanel(provinceInfo) {
         <div class="province-actions-row">
           <button class="read-more-btn">Xem chi tiết</button>
           <button class="add-memory-btn">Thêm kỷ niệm</button>
-          <button type="button" class="read-more-btn province-ask-ai-btn VNN-ai-icon-button" data-vnova-ask-ai="true" aria-label="Hỏi AI về ${escapeHtml(provinceName)}" title="Hỏi AI về ${escapeHtml(provinceName)}">
+          <button type="button" class="read-more-btn province-ask-ai-btn twai-ai-icon-button" data-vnova-ask-ai="true" aria-label="Hỏi AI về ${escapeHtml(provinceName)}" title="Hỏi AI về ${escapeHtml(provinceName)}">
             <span data-interface-icon="sparkles"></span>
             <span class="province-ask-ai-label">Hỏi AI</span>
           </button>
@@ -2279,7 +2279,7 @@ function renderProvinceCalendarItem34(item) {
   const type = item?.type === "holiday" ? "holiday" : "festival";
   const provinces = Array.isArray(item?.provinces) ? item.provinces.filter(Boolean) : [];
   const askAiButton = name
-    ? `<button type="button" class="festival-calendar-ask-ai-btn VNN-ai-icon-button" data-vnova-ask-ai="true" data-ai-event-name="${escapeHtml(name)}" data-ai-event-type="${escapeHtml(type)}" aria-label="Hỏi AI về ${escapeHtml(name)}" title="Hỏi AI về ${escapeHtml(name)}"><span data-interface-icon="sparkles"></span></button>`
+    ? `<button type="button" class="festival-calendar-ask-ai-btn twai-ai-icon-button" data-vnova-ask-ai="true" data-ai-event-name="${escapeHtml(name)}" data-ai-event-type="${escapeHtml(type)}" aria-label="Hỏi AI về ${escapeHtml(name)}" title="Hỏi AI về ${escapeHtml(name)}"><span data-interface-icon="sparkles"></span></button>`
     : "";
 
   return `

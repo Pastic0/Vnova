@@ -228,12 +228,12 @@ body.admin-page {
 
 body.public-tour-page,
 body.posts-page {
-  background-image: linear-gradient(135deg, rgba(3, 7, 18, 0.66), rgba(15, 23, 42, 0.56)), var(--VNN-page-bg-image);
+  background-image: linear-gradient(135deg, rgba(3, 7, 18, 0.66), rgba(15, 23, 42, 0.56)), var(--twai-page-bg-image);
 }
 
 body.tour-sales-page,
 body.admin-page {
-  background-image: linear-gradient(135deg, rgba(3, 7, 18, 0.74), rgba(15, 23, 42, 0.56)), var(--VNN-page-bg-image);
+  background-image: linear-gradient(135deg, rgba(3, 7, 18, 0.74), rgba(15, 23, 42, 0.56)), var(--twai-page-bg-image);
   background-color: #0b63f6;
 }
 
@@ -304,7 +304,7 @@ body.admin-page::before {
   place-items: center;
   color: white;
   font-size: 42px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.78), rgba(15, 23, 42, 0.82)), var(--VNN-page-bg-image);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.78), rgba(15, 23, 42, 0.82)), var(--twai-page-bg-image);
   background-size: cover;
   background-position: center;
 }
@@ -485,7 +485,7 @@ body.admin-page,
 body.tour-sales-page {
   background-image:
     linear-gradient(135deg, rgba(3, 7, 18, 0.74), rgba(15, 23, 42, 0.64)),
-    var(--VNN-page-bg-image);
+    var(--twai-page-bg-image);
 }
 
 body.admin-page .tour-admin-shell,
@@ -1569,7 +1569,7 @@ body.tour-sales-page td {
   overflow: hidden;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.70), rgba(14, 165, 233, 0.45)), var(--VNN-page-bg-image);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.70), rgba(14, 165, 233, 0.45)), var(--twai-page-bg-image);
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -4218,12 +4218,12 @@ body.posts-page .post-comment-ai-translate.is-loading::after {
   to { transform: rotate(360deg); }
 }
 
-body.posts-page .post-ai-action-button.VNN-ai-icon-button {
-  --VNN-ai-button-size: 38px;
+body.posts-page .post-ai-action-button.twai-ai-icon-button {
+  --twai-ai-button-size: 38px;
 }
 
-.post-ai-generate-button.VNN-ai-icon-button {
-  --VNN-ai-button-size: 38px;
+.post-ai-generate-button.twai-ai-icon-button {
+  --twai-ai-button-size: 38px;
   position: absolute !important;
   right: 7px !important;
   top: 50% !important;
@@ -4234,8 +4234,8 @@ body.posts-page .post-ai-action-button.VNN-ai-icon-button {
   transform: translateY(-50%) !important;
 }
 
-.post-ai-generate-button.VNN-ai-icon-button:hover:not(:disabled),
-.post-ai-generate-button.VNN-ai-icon-button:focus-visible:not(:disabled) {
+.post-ai-generate-button.twai-ai-icon-button:hover:not(:disabled),
+.post-ai-generate-button.twai-ai-icon-button:focus-visible:not(:disabled) {
   transform: translateY(-50%) scale(1.04) !important;
 }
 

@@ -22,7 +22,7 @@ body.profile-page {
   color: var(--profile-text);
   background:
     linear-gradient(180deg, rgba(7, 13, 28, 0.28), rgba(15, 23, 42, 0.52)),
-    var(--VNN-page-bg-image) center / cover fixed no-repeat;
+    var(--twai-page-bg-image) center / cover fixed no-repeat;
   overflow-x: hidden;
 }
 

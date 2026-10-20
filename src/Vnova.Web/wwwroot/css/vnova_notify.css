@@ -1,4 +1,4 @@
-.VNN-notify-stack {
+.twai-notify-stack {
   position: fixed;
   top: max(10px, env(safe-area-inset-top));
   right: max(14px, env(safe-area-inset-right));
@@ -10,7 +10,7 @@
   pointer-events: none;
 }
 
-.VNN-notify-item {
+.twai-notify-item {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -32,17 +32,17 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.VNN-notify-item:focus-visible {
+.twai-notify-item:focus-visible {
   outline: 3px solid rgba(37, 99, 235, .34);
   outline-offset: 2px;
 }
 
-.VNN-notify-item.show {
+.twai-notify-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-.VNN-notify-dot {
+.twai-notify-dot {
   width: 10px;
   height: 10px;
   border-radius: 999px;
@@ -50,19 +50,19 @@
   box-shadow: 0 0 0 6px rgba(37, 99, 235, .10);
 }
 
-.VNN-notify-item.success .VNN-notify-dot { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 0 0 6px rgba(34, 197, 94, .12); }
-.VNN-notify-item.error .VNN-notify-dot { background: linear-gradient(135deg, #dc2626, #f97316); box-shadow: 0 0 0 6px rgba(239, 68, 68, .12); }
-.VNN-notify-item.warning .VNN-notify-dot { background: linear-gradient(135deg, #d97706, #facc15); box-shadow: 0 0 0 6px rgba(250, 204, 21, .14); }
+.twai-notify-item.success .twai-notify-dot { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 0 0 6px rgba(34, 197, 94, .12); }
+.twai-notify-item.error .twai-notify-dot { background: linear-gradient(135deg, #dc2626, #f97316); box-shadow: 0 0 0 6px rgba(239, 68, 68, .12); }
+.twai-notify-item.warning .twai-notify-dot { background: linear-gradient(135deg, #d97706, #facc15); box-shadow: 0 0 0 6px rgba(250, 204, 21, .14); }
 
-.VNN-notify-message {
+.twai-notify-message {
   font-size: 14px;
   line-height: 1.45;
   font-weight: 800;
   word-break: break-word;
 }
 
-.VNN-notify-close,
-.VNN-notify-x {
+.twai-notify-close,
+.twai-notify-x {
   border: 0;
   background: transparent;
   color: #475569;
@@ -72,19 +72,19 @@
   line-height: 1;
 }
 
-.VNN-notify-close {
+.twai-notify-close {
   width: 30px;
   height: 30px;
   border-radius: 999px;
 }
 
-.VNN-notify-close:hover,
-.VNN-notify-x:hover {
+.twai-notify-close:hover,
+.twai-notify-x:hover {
   background: rgba(15, 23, 42, .06);
   color: #0f172a;
 }
 
-.VNN-notify-dialog {
+.twai-notify-dialog {
   position: fixed;
   inset: 0;
   z-index: 2147483646;
@@ -94,11 +94,11 @@
   background: transparent;
 }
 
-.VNN-notify-dialog.open {
+.twai-notify-dialog.open {
   display: grid;
 }
 
-.VNN-notify-card {
+.twai-notify-card {
   position: relative;
   width: min(420px, calc(100vw - 28px));
   border-radius: 24px;
@@ -109,14 +109,14 @@
   box-shadow: 0 24px 70px rgba(15, 23, 42, .22);
 }
 
-.VNN-notify-title {
+.twai-notify-title {
   margin-right: 34px;
   font-size: 20px;
   font-weight: 950;
   letter-spacing: -.02em;
 }
 
-.VNN-notify-text {
+.twai-notify-text {
   margin-top: 10px;
   color: #475569;
   font-size: 14px;
@@ -125,7 +125,7 @@
   white-space: pre-line;
 }
 
-.VNN-notify-x {
+.twai-notify-x {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -136,7 +136,7 @@
   background: #fff;
 }
 
-.VNN-notify-input {
+.twai-notify-input {
   width: 100%;
   min-height: 44px;
   margin-top: 14px;
@@ -150,19 +150,19 @@
   font-weight: 700;
 }
 
-.VNN-notify-input:focus {
+.twai-notify-input:focus {
   border-color: rgba(37, 99, 235, .55);
   box-shadow: 0 0 0 4px rgba(37, 99, 235, .10);
 }
 
-.VNN-notify-actions {
+.twai-notify-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   margin-top: 18px;
 }
 
-.VNN-notify-btn {
+.twai-notify-btn {
   min-height: 42px;
   border-radius: 999px;
   border: 1px solid rgba(15, 23, 42, .12);
@@ -172,35 +172,35 @@
   cursor: pointer;
 }
 
-.VNN-notify-btn.primary {
+.twai-notify-btn.primary {
   color: #fff;
   background: linear-gradient(135deg, #2563eb, #06b6d4);
   border-color: transparent;
   box-shadow: 0 12px 28px rgba(37, 99, 235, .22);
 }
 
-.VNN-notify-btn.soft {
+.twai-notify-btn.soft {
   color: #0f172a;
   background: rgba(241, 245, 249, .95);
 }
 
-.VNN-notify-btn:hover {
+.twai-notify-btn:hover {
   transform: translateY(-1px);
 }
 
 @media (max-width: 640px) {
-  .VNN-notify-stack {
+  .twai-notify-stack {
     top: max(8px, env(safe-area-inset-top));
     right: max(8px, env(safe-area-inset-right));
     bottom: auto;
     width: calc(100vw - 16px);
   }
 
-  .VNN-notify-actions {
+  .twai-notify-actions {
     flex-direction: column-reverse;
   }
 
-  .VNN-notify-btn {
+  .twai-notify-btn {
     width: 100%;
   }
 }

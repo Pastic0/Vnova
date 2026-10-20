@@ -4,10 +4,10 @@
    ========================================================================== */
 
 :root {
-  --VNN-auth-primary: #003b73;
-  --VNN-auth-primary-hover: #002b55;
-  --VNN-auth-link: #7dd3fc;
-  --VNN-auth-link-hover: #bae6fd;
+  --twai-auth-primary: #003b73;
+  --twai-auth-primary-hover: #002b55;
+  --twai-auth-link: #7dd3fc;
+  --twai-auth-link-hover: #bae6fd;
 
   /* Cùng bộ màu với card của landing */
   --tw-ink: #07111f;
@@ -59,7 +59,7 @@ body {
   padding: clamp(20px, 4vh, 40px) 16px;
   color: #ffffff;
   background-color: #060d1c;
-  background-image: var(--VNN-page-bg-image);
+  background-image: var(--twai-page-bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -277,7 +277,7 @@ body {
 .password-reset-card a,
 .signup-link,
 .login-link {
-  color: var(--VNN-auth-link);
+  color: var(--twai-auth-link);
   font-weight: 800;
   text-decoration: none;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.42);
@@ -287,7 +287,7 @@ body {
 .password-reset-card a:hover,
 .signup-link:hover,
 .login-link:hover {
-  color: var(--VNN-auth-link-hover);
+  color: var(--twai-auth-link-hover);
   text-decoration: underline;
 }
 

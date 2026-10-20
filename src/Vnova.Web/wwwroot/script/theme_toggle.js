@@ -45,7 +45,7 @@
     if (!host) {
       host = document.createElement("div");
       host.id = "vnovaFloatingTools";
-      host.className = "VNN-floating-tools-zone";
+      host.className = "twai-floating-tools-zone";
       host.setAttribute("aria-label", "Công cụ nhanh Vnova");
       document.body.appendChild(host);
     }
@@ -57,11 +57,11 @@
     if (!button) {
       button = document.createElement("button");
       button.id = "vnovaReloadButton";
-      button.className = "VNN-theme-toggle VNN-tool-action VNN-reload-toggle";
+      button.className = "twai-theme-toggle twai-tool-action twai-reload-toggle";
       button.type = "button";
     }
     if (button.parentElement !== host) host.appendChild(button);
-    button.style.setProperty("--VNN-tool-index", "4");
+    button.style.setProperty("--twai-tool-index", "4");
     setButtonIcon(button, "refresh-cw");
     button.setAttribute("aria-label", "Tải lại");
     button.setAttribute("title", "Tải lại");
@@ -71,7 +71,7 @@
   function isSafeCacheKeyToRemove(key) {
     if (!key) return false;
     const normalized = String(key).toLowerCase();
-    return normalized === "VNN_cache_conversations"
+    return normalized === "twai_cache_conversations"
       || normalized.startsWith("vnova:notifications:cache:")
       || normalized.startsWith("vnova:notifications:read:")
       || normalized.startsWith("vnova:notifications:deleted:")
@@ -100,11 +100,11 @@
     if (!button) {
       button = document.createElement("button");
       button.id = "vnovaCacheClearButton";
-      button.className = "VNN-theme-toggle VNN-tool-action VNN-cache-clear-toggle";
+      button.className = "twai-theme-toggle twai-tool-action twai-cache-clear-toggle";
       button.type = "button";
     }
     if (button.parentElement !== host) host.appendChild(button);
-    button.style.setProperty("--VNN-tool-index", "3");
+    button.style.setProperty("--twai-tool-index", "3");
     setCacheButtonState(button, false);
     button.onclick = async function () {
       button.disabled = true;
@@ -159,11 +159,11 @@
     if (!button) {
       button = document.createElement("button");
       button.id = "vnovaThemeToggle";
-      button.className = "VNN-theme-toggle VNN-tool-action";
+      button.className = "twai-theme-toggle twai-tool-action";
       button.type = "button";
     }
     if (button.parentElement !== host) host.appendChild(button);
-    button.style.setProperty("--VNN-tool-index", "1");
+    button.style.setProperty("--twai-tool-index", "1");
     setThemeButtonState(button, readTheme());
     button.onclick = function () {
       const current = document.documentElement.getAttribute("data-vnova-theme") === "dark" ? "dark" : "light";
@@ -176,7 +176,7 @@
     if (!button) {
       button = document.createElement("button");
       button.id = "vnovaToolsRevealButton";
-      button.className = "VNN-theme-toggle VNN-tools-reveal-toggle";
+      button.className = "twai-theme-toggle twai-tools-reveal-toggle";
       button.type = "button";
       button.setAttribute("data-no-translate", "");
       host.appendChild(button);

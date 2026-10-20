@@ -373,7 +373,7 @@ public sealed class CommerceApiController : ApiControllerBase
                 ["updated_at"] = now
             });
 
-            var safeOrderId = string.IsNullOrWhiteSpace(orderId) ? $"VNN-{DateTime.UtcNow:yyyyMMddHHmmssfff}" : orderId;
+            var safeOrderId = string.IsNullOrWhiteSpace(orderId) ? $"TWAI-{DateTime.UtcNow:yyyyMMddHHmmssfff}" : orderId;
             var paymentCode = AutomaticPaymentService.CreatePaymentCode(
                 safeOrderId,
                 _sePay.PaymentCodePrefix,

@@ -87,7 +87,7 @@ builder.Services.PostConfigure<SePayOptions>(options =>
         configuration["SEPAY_PAYMENT_CODE_PREFIX"],
         configuration["SePay:PaymentCodePrefix"],
         options.PaymentCodePrefix,
-        "VNN");
+        "TWAI");
     options.ValidateAccountNumber = FirstBool(
         configuration["SEPAY_VALIDATE_ACCOUNT_NUMBER"],
         configuration["SePay:ValidateAccountNumber"],

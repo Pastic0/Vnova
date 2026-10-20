@@ -71,7 +71,7 @@ public sealed class PaymentOrderExpirationHostedService : BackgroundService
                 }
 
                 // Keep expired payment records for a grace period so a delayed bank
-                // webhook can still find the unique VNN code and activate the order.
+                // webhook can still find the unique TWAI code and activate the order.
                 // They are hidden from Manage immediately and removed after 24 hours.
                 var expiredOrders = await repository.WhereEqualAsync(
                     OrdersCollection,

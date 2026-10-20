@@ -26,7 +26,7 @@ body.schedule-page {
   color: var(--schedule-text);
   background:
     linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(37, 99, 235, 0.38)),
-    var(--VNN-page-bg-image) center / cover fixed no-repeat;
+    var(--twai-page-bg-image) center / cover fixed no-repeat;
   font-family: var(--vnova-font, Tahoma, Arial, sans-serif);
 }
 
@@ -1634,7 +1634,7 @@ body.schedule-page .overview-card {
 }
 
 .schedule-ai-apply-button {
-  --VNN-ai-button-size: 48px;
+  --twai-ai-button-size: 48px;
   align-self: stretch;
   border-radius: 15px !important;
 }

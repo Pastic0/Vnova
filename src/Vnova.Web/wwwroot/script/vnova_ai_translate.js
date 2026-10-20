@@ -421,7 +421,7 @@
     if (selector) {
       try { return document.querySelector(selector); } catch (_) { return null; }
     }
-    return button?.closest?.("form, .message-input, .VNN-chatbot-form")
+    return button?.closest?.("form, .message-input, .twai-chatbot-form")
       ?.parentElement?.querySelector?.("[data-chat-message-list]") || null;
   }
 

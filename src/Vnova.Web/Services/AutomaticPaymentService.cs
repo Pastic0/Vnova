@@ -123,7 +123,7 @@ public sealed class AutomaticPaymentService
             if (order is null)
             {
                 var detectedCodes = paymentCodes.Count == 0
-                    ? "không phát hiện được mã VNN"
+                    ? "không phát hiện được mã TWAI"
                     : string.Join(", ", paymentCodes);
                 await SaveTransactionAsync(
                     transactionDocumentId,
@@ -137,7 +137,7 @@ public sealed class AutomaticPaymentService
             var orderId = FirstText(order, "id", "Id");
 
             // SePay may put the receiving virtual/sub account in subAccount while
-            // accountNumber contains the underlying bank account. A unique VNN
+            // accountNumber contains the underlying bank account. A unique TWAI
             // code already identifies the order, so an account-field mismatch must
             // not prevent a valid paid order from being activated.
             if (_options.ValidateAccountNumber
@@ -468,7 +468,7 @@ public sealed class AutomaticPaymentService
         IReadOnlyList<string> paymentCodes,
         SePayWebhookPayload payload)
     {
-        // Mỗi nội dung webhook có thể chứa nhiều chuỗi VNN. Thử lần lượt tất cả
+        // Mỗi nội dung webhook có thể chứa nhiều chuỗi TWAI. Thử lần lượt tất cả
         // mã phát hiện được và chỉ nhận đơn có payment_code trùng chính xác.
         foreach (var paymentCode in paymentCodes)
         {
@@ -585,12 +585,12 @@ public sealed class AutomaticPaymentService
 
     private static string NormalizePrefix(string? value)
     {
-        var prefix = new string((value ?? "VNN")
+        var prefix = new string((value ?? "TWAI")
             .Where(char.IsLetterOrDigit)
             .Select(char.ToUpperInvariant)
             .Take(5)
             .ToArray());
-        if (prefix.Length < 2) return "VNN";
+        if (prefix.Length < 2) return "TWAI";
         return prefix;
     }
 

@@ -1,4 +1,4 @@
-.VNN-floating-chatbot-component {
+.twai-floating-chatbot-component {
   --chatbot-ink: #0b315a;
   --chatbot-deep: #064a91;
   --chatbot-blue: #1687e8;
@@ -15,22 +15,22 @@
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.VNN-floating-chatbot-component,
-.VNN-floating-chatbot-component * {
+.twai-floating-chatbot-component,
+.twai-floating-chatbot-component * {
   box-sizing: border-box;
 }
 
-.VNN-floating-chatbot-component [hidden] {
+.twai-floating-chatbot-component [hidden] {
   display: none !important;
 }
 
-.VNN-floating-chatbot-component button,
-.VNN-floating-chatbot-component input,
-.VNN-floating-chatbot-component a {
+.twai-floating-chatbot-component button,
+.twai-floating-chatbot-component input,
+.twai-floating-chatbot-component a {
   font: inherit;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-launcher {
+.twai-floating-chatbot-component .twai-chatbot-launcher {
   position: fixed !important;
   right: max(18px, env(safe-area-inset-right)) !important;
   bottom: max(18px, env(safe-area-inset-bottom)) !important;
@@ -59,22 +59,22 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-launcher:hover {
+.twai-floating-chatbot-component .twai-chatbot-launcher:hover {
   transform: translateY(-3px) scale(1.04) !important;
   border-color: rgba(255, 255, 255, 0.92) !important;
   box-shadow: 0 24px 62px rgba(8, 101, 189, 0.42) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-launcher:active {
+.twai-floating-chatbot-component .twai-chatbot-launcher:active {
   transform: translateY(0) scale(0.98) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-launcher:focus-visible {
+.twai-floating-chatbot-component .twai-chatbot-launcher:focus-visible {
   outline: 3px solid rgba(125, 211, 252, 0.55) !important;
   outline-offset: 3px !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-tool-icon {
+.twai-floating-chatbot-component .twai-chatbot-tool-icon {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
@@ -87,9 +87,9 @@
 
 /* The uploaded logo is painted on the stable avatar shell as well as the img.
    This prevents a blank/white frame while the image element is loading. */
-html.has-site-logo .VNN-floating-chatbot-component .VNN-chatbot-launcher.chatbot-logo-background,
-html.has-site-logo .VNN-floating-chatbot-component .VNN-chatbot-avatar-wrap.chatbot-logo-background,
-html.has-site-logo .VNN-floating-chatbot-component .admin-support-message-avatar.chatbot-logo-background {
+html.has-site-logo .twai-floating-chatbot-component .twai-chatbot-launcher.chatbot-logo-background,
+html.has-site-logo .twai-floating-chatbot-component .twai-chatbot-avatar-wrap.chatbot-logo-background,
+html.has-site-logo .twai-floating-chatbot-component .admin-support-message-avatar.chatbot-logo-background {
   background-color: transparent !important;
   background-image: var(--vnova-site-logo, none) !important;
   background-repeat: no-repeat !important;
@@ -98,14 +98,14 @@ html.has-site-logo .VNN-floating-chatbot-component .admin-support-message-avatar
 }
 
 /* Do not draw a white placeholder when no uploaded logo is available yet. */
-html:not(.has-site-logo) .VNN-floating-chatbot-component .VNN-chatbot-avatar-wrap.chatbot-logo-background,
-html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-avatar.chatbot-logo-background {
+html:not(.has-site-logo) .twai-floating-chatbot-component .twai-chatbot-avatar-wrap.chatbot-logo-background,
+html:not(.has-site-logo) .twai-floating-chatbot-component .admin-support-message-avatar.chatbot-logo-background {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-view {
+.twai-floating-chatbot-component .twai-chatbot-view {
   position: fixed !important;
   right: max(18px, env(safe-area-inset-right)) !important;
   bottom: max(92px, calc(env(safe-area-inset-bottom) + 82px)) !important;
@@ -133,20 +133,20 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   isolation: isolate;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-view.open {
+.twai-floating-chatbot-component .twai-chatbot-view.open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-view.is-dragging {
+.twai-floating-chatbot-component .twai-chatbot-view.is-dragging {
   transition: none !important;
   user-select: none;
   box-shadow: 0 34px 92px rgba(8, 74, 145, 0.34) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-header {
+.twai-floating-chatbot-component .twai-chatbot-header {
   position: relative;
   min-height: 72px;
   flex: 0 0 auto;
@@ -167,11 +167,11 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   cursor: grab;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-view.is-dragging .VNN-chatbot-header {
+.twai-floating-chatbot-component .twai-chatbot-view.is-dragging .twai-chatbot-header {
   cursor: grabbing;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-header::after {
+.twai-floating-chatbot-component .twai-chatbot-header::after {
   content: "";
   position: absolute;
   left: 14px;
@@ -182,7 +182,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   pointer-events: none;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-user-info {
+.twai-floating-chatbot-component .twai-chatbot-user-info {
   min-width: 0;
   flex: 1 1 auto;
   display: flex;
@@ -194,7 +194,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   text-align: left !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-avatar-wrap {
+.twai-floating-chatbot-component .twai-chatbot-avatar-wrap {
   position: relative;
   width: 46px;
   height: 46px;
@@ -207,7 +207,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-avatar {
+.twai-floating-chatbot-component .twai-chatbot-avatar {
   width: 46px !important;
   height: 46px !important;
   display: block !important;
@@ -218,7 +218,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   object-position: center !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-online-dot {
+.twai-floating-chatbot-component .twai-chatbot-online-dot {
   position: absolute;
   right: 0;
   bottom: 1px;
@@ -230,7 +230,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.16);
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-user-details {
+.twai-floating-chatbot-component .twai-chatbot-user-details {
   min-width: 0;
   flex: 1 1 auto;
   margin: 0 !important;
@@ -238,7 +238,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   text-align: left !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-title-row {
+.twai-floating-chatbot-component .twai-chatbot-title-row {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -246,7 +246,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   min-width: 0;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-title-row h3 {
+.twai-floating-chatbot-component .twai-chatbot-title-row h3 {
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden;
@@ -258,7 +258,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   white-space: nowrap;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-user-details p {
+.twai-floating-chatbot-component .twai-chatbot-user-details p {
   margin: 4px 0 0 !important;
   padding: 0 !important;
   color: rgba(255, 255, 255, 0.76) !important;
@@ -267,7 +267,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   line-height: 1.2 !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-header-actions {
+.twai-floating-chatbot-component .twai-chatbot-header-actions {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   margin-left: auto;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-icon-btn {
+.twai-floating-chatbot-component .twai-chatbot-icon-btn {
   width: 36px !important;
   height: 36px !important;
   min-width: 36px !important;
@@ -293,25 +293,25 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   transition: background 0.16s ease, border-color 0.16s ease, transform 0.16s ease !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-icon-btn:hover {
+.twai-floating-chatbot-component .twai-chatbot-icon-btn:hover {
   border-color: rgba(255, 255, 255, 0.68) !important;
   background: rgba(255, 255, 255, 0.24) !important;
   transform: translateY(-1px);
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-close-btn:hover {
+.twai-floating-chatbot-component .twai-chatbot-close-btn:hover {
   border-color: rgba(255, 255, 255, 0.68) !important;
   background: rgba(255, 255, 255, 0.24) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-icon-btn:focus-visible {
+.twai-floating-chatbot-component .twai-chatbot-icon-btn:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.78) !important;
   outline-offset: 2px !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-icon-btn svg,
-.VNN-floating-chatbot-component .VNN-chatbot-attach-btn svg,
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn svg {
+.twai-floating-chatbot-component .twai-chatbot-icon-btn svg,
+.twai-floating-chatbot-component .twai-chatbot-attach-btn svg,
+.twai-floating-chatbot-component .twai-chatbot-send-btn svg {
   width: 18px !important;
   height: 18px !important;
   fill: none !important;
@@ -322,7 +322,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   pointer-events: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-body {
+.twai-floating-chatbot-component .twai-chatbot-body {
   min-height: 0;
   flex: 1 1 auto;
   display: flex;
@@ -331,7 +331,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   background: #f3f9ff !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-messages {
+.twai-floating-chatbot-component .twai-chatbot-messages {
   min-height: 0;
   flex: 1 1 auto;
   display: flex;
@@ -351,16 +351,16 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   scrollbar-width: thin;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-messages::-webkit-scrollbar {
+.twai-floating-chatbot-component .twai-chatbot-messages::-webkit-scrollbar {
   width: 6px;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-messages::-webkit-scrollbar-thumb {
+.twai-floating-chatbot-component .twai-chatbot-messages::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: #9fc8ea;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row {
+.twai-floating-chatbot-component .admin-support-message-row {
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -369,15 +369,15 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   padding: 0 !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.sent {
+.twai-floating-chatbot-component .admin-support-message-row.sent {
   justify-content: flex-end;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.received {
+.twai-floating-chatbot-component .admin-support-message-row.received {
   justify-content: flex-start;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-avatar {
+.twai-floating-chatbot-component .admin-support-message-avatar {
   width: 31px !important;
   height: 31px !important;
   flex: 0 0 31px !important;
@@ -393,7 +393,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   font-weight: 900 !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-avatar img {
+.twai-floating-chatbot-component .admin-support-message-avatar img {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
@@ -402,7 +402,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   object-position: center !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-bubble {
+.twai-floating-chatbot-component .admin-support-message-bubble {
   max-width: 82%;
   min-width: 82px;
   margin: 0 !important;
@@ -415,7 +415,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 7px 20px rgba(8, 74, 145, 0.075) !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-bubble {
+.twai-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-bubble {
   border-color: rgba(14, 116, 205, 0.24) !important;
   border-radius: 18px 18px 6px 18px !important;
   background: linear-gradient(135deg, var(--chatbot-blue-dark), var(--chatbot-blue)) !important;
@@ -423,7 +423,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 8px 22px rgba(7, 91, 184, 0.22) !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-sender {
+.twai-floating-chatbot-component .admin-support-message-sender {
   margin: 0 0 4px !important;
   color: #0b66b6 !important;
   font-size: 0.67rem !important;
@@ -431,11 +431,11 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   line-height: 1.2 !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-sender {
+.twai-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-sender {
   color: rgba(255, 255, 255, 0.78) !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-text {
+.twai-floating-chatbot-component .admin-support-message-text {
   margin: 0 !important;
   padding: 0 !important;
   color: inherit !important;
@@ -445,7 +445,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   white-space: pre-wrap;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-time {
+.twai-floating-chatbot-component .admin-support-message-time {
   margin: 6px 0 0 !important;
   color: #6d91b3 !important;
   font-size: 0.61rem !important;
@@ -454,18 +454,18 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   text-align: right;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-time {
+.twai-floating-chatbot-component .admin-support-message-row.sent .admin-support-message-time {
   color: rgba(255, 255, 255, 0.66) !important;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-media-list {
+.twai-floating-chatbot-component .admin-support-message-media-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 7px;
   margin-top: 8px;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-image {
+.twai-floating-chatbot-component .admin-support-message-image {
   width: 100% !important;
   max-height: 180px !important;
   display: block !important;
@@ -476,7 +476,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 5px 16px rgba(8, 74, 145, 0.13) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-input-area {
+.twai-floating-chatbot-component .twai-chatbot-input-area {
   flex: 0 0 auto;
   margin: 0 !important;
   padding: 11px 12px 10px !important;
@@ -486,7 +486,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: 0 -8px 26px rgba(8, 74, 145, 0.045) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestions {
+.twai-floating-chatbot-component .twai-chatbot-suggestions {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -496,11 +496,11 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   scrollbar-width: none;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestions::-webkit-scrollbar {
+.twai-floating-chatbot-component .twai-chatbot-suggestions::-webkit-scrollbar {
   display: none;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestion {
+.twai-floating-chatbot-component .twai-chatbot-suggestion {
   min-height: 31px !important;
   flex: 0 0 auto;
   margin: 0 !important;
@@ -518,20 +518,20 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestion:hover,
-.VNN-floating-chatbot-component .VNN-chatbot-suggestion:focus-visible {
+.twai-floating-chatbot-component .twai-chatbot-suggestion:hover,
+.twai-floating-chatbot-component .twai-chatbot-suggestion:focus-visible {
   border-color: rgba(14, 116, 205, 0.34) !important;
   background: #dcefff !important;
   color: #07589f !important;
   outline: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestion:disabled {
+.twai-floating-chatbot-component .twai-chatbot-suggestion:disabled {
   opacity: 0.5 !important;
   cursor: wait !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-input-shell {
+.twai-floating-chatbot-component .twai-chatbot-input-shell {
   min-height: 48px;
   display: flex;
   align-items: center;
@@ -544,13 +544,13 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-input-shell:focus-within {
+.twai-floating-chatbot-component .twai-chatbot-input-shell:focus-within {
   border-color: #1687e8 !important;
   background: #fff !important;
   box-shadow: 0 0 0 3px rgba(22, 135, 232, 0.14) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-input-shell input {
+.twai-floating-chatbot-component .twai-chatbot-input-shell input {
   min-width: 0 !important;
   width: auto !important;
   height: 38px !important;
@@ -570,13 +570,13 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   vertical-align: middle !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-input-shell input::placeholder {
+.twai-floating-chatbot-component .twai-chatbot-input-shell input::placeholder {
   color: #6d91b3 !important;
   opacity: 1 !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-attach-btn,
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn {
+.twai-floating-chatbot-component .twai-chatbot-attach-btn,
+.twai-floating-chatbot-component .twai-chatbot-send-btn {
   margin: 0 !important;
   padding: 0 !important;
   display: grid !important;
@@ -584,7 +584,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   cursor: pointer !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-attach-btn {
+.twai-floating-chatbot-component .twai-chatbot-attach-btn {
   width: 36px !important;
   height: 36px !important;
   flex: 0 0 36px !important;
@@ -595,12 +595,12 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   box-shadow: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-attach-btn:hover {
+.twai-floating-chatbot-component .twai-chatbot-attach-btn:hover {
   background: #e2f1ff !important;
   color: #075fae !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn {
+.twai-floating-chatbot-component .twai-chatbot-send-btn {
   width: 39px !important;
   height: 39px !important;
   flex: 0 0 39px !important;
@@ -612,32 +612,32 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   transition: transform 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn:hover {
+.twai-floating-chatbot-component .twai-chatbot-send-btn:hover {
   transform: translateY(-1px) !important;
   box-shadow: 0 11px 22px rgba(8, 101, 189, 0.32) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn:disabled {
+.twai-floating-chatbot-component .twai-chatbot-send-btn:disabled {
   opacity: 0.58 !important;
   cursor: wait !important;
   transform: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-loading svg {
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-loading svg {
   display: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-loading::after {
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-loading::after {
   content: "";
   width: 16px;
   height: 16px;
   border: 2px solid rgba(255, 255, 255, 0.45);
   border-top-color: #fff;
   border-radius: 50%;
-  animation: VNN-floating-chatbot-spin 0.75s linear infinite;
+  animation: twai-floating-chatbot-spin 0.75s linear infinite;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-image-preview {
+.twai-floating-chatbot-component .twai-chatbot-image-preview {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
@@ -650,7 +650,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   background: #edf7ff !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item {
   position: relative;
   min-width: 0;
   display: grid;
@@ -663,8 +663,8 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   background: #fff !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item img,
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item video {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item img,
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item video {
   width: 48px !important;
   height: 48px !important;
   display: block !important;
@@ -674,7 +674,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   object-fit: cover !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item strong {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item strong {
   min-width: 0;
   overflow: hidden;
   color: #214b70 !important;
@@ -684,7 +684,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   white-space: nowrap;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item button {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item button {
   width: 28px !important;
   height: 28px !important;
   margin: 0 !important;
@@ -698,16 +698,16 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   cursor: pointer !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item button:hover {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item button:hover {
   background: #fecaca !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-media-preview-item button svg {
+.twai-floating-chatbot-component .twai-chatbot-media-preview-item button svg {
   width: 15px !important;
   height: 15px !important;
 }
 
-.VNN-floating-chatbot-component .support-admin-status {
+.twai-floating-chatbot-component .support-admin-status {
   margin: 7px 2px 0 !important;
   color: #5b7691 !important;
   font-size: 0.7rem !important;
@@ -715,7 +715,7 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   text-align: center !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-open-messaging {
+.twai-floating-chatbot-component .twai-chatbot-open-messaging {
   display: block !important;
   width: max-content;
   margin: 7px auto 0 !important;
@@ -729,90 +729,90 @@ html:not(.has-site-logo) .VNN-floating-chatbot-component .admin-support-message-
   line-height: 1.2 !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-open-messaging:hover {
+.twai-floating-chatbot-component .twai-chatbot-open-messaging:hover {
   color: #07589f !important;
   text-decoration: underline !important;
 }
 
 
-html[data-vnova-theme="dark"] .VNN-floating-chatbot-component,
-html[data-vnova-theme="dark"] .VNN-floating-chatbot-component * {
+html[data-vnova-theme="dark"] .twai-floating-chatbot-component,
+html[data-vnova-theme="dark"] .twai-floating-chatbot-component * {
   color-scheme: light !important;
 }
 
-@keyframes VNN-floating-chatbot-spin {
+@keyframes twai-floating-chatbot-spin {
   to { transform: rotate(360deg); }
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-chatbot-component .VNN-chatbot-launcher {
+  .twai-floating-chatbot-component .twai-chatbot-launcher {
     right: max(10px, env(safe-area-inset-right)) !important;
     bottom: max(10px, env(safe-area-inset-bottom)) !important;
     width: 42px !important;
     height: 42px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-view {
+  .twai-floating-chatbot-component .twai-chatbot-view {
     right: max(9px, env(safe-area-inset-right)) !important;
     bottom: max(60px, calc(env(safe-area-inset-bottom) + 54px)) !important;
     width: calc(100vw - 18px) !important;
     height: min(76dvh, 640px) !important;
-    min-height: min(390px, calc(var(--VNN-vv-h, 100dvh) - 80px));
+    min-height: min(390px, calc(var(--twai-vv-h, 100dvh) - 80px));
     border-radius: 20px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-header {
+  .twai-floating-chatbot-component .twai-chatbot-header {
     min-height: 66px;
     gap: 8px;
     padding: 10px 9px 10px 8px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-avatar-wrap,
-  .VNN-floating-chatbot-component .VNN-chatbot-avatar {
+  .twai-floating-chatbot-component .twai-chatbot-avatar-wrap,
+  .twai-floating-chatbot-component .twai-chatbot-avatar {
     width: 42px !important;
     height: 42px !important;
     flex-basis: 42px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-icon-btn {
+  .twai-floating-chatbot-component .twai-chatbot-icon-btn {
     width: 34px !important;
     height: 34px !important;
     min-width: 34px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-messages {
+  .twai-floating-chatbot-component .twai-chatbot-messages {
     padding: 15px 10px 13px !important;
   }
 
-  .VNN-floating-chatbot-component .admin-support-message-bubble {
+  .twai-floating-chatbot-component .admin-support-message-bubble {
     max-width: 84%;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-input-area {
+  .twai-floating-chatbot-component .twai-chatbot-input-area {
     padding: 9px 9px 8px !important;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-image-preview {
+  .twai-floating-chatbot-component .twai-chatbot-image-preview {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 380px) {
-  .VNN-floating-chatbot-component .VNN-chatbot-user-info {
+  .twai-floating-chatbot-component .twai-chatbot-user-info {
     gap: 7px;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-header-actions {
+  .twai-floating-chatbot-component .twai-chatbot-header-actions {
     gap: 5px;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-title-row h3 {
+  .twai-floating-chatbot-component .twai-chatbot-title-row h3 {
     font-size: 0.96rem !important;
   }
 }
 
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn {
   min-width: 58px !important;
   width: auto !important;
   height: 34px !important;
@@ -829,38 +829,38 @@ html[data-vnova-theme="dark"] .VNN-floating-chatbot-component * {
   cursor: pointer !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn span {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn span {
   font-size: 10px !important;
   font-weight: 900 !important;
   line-height: 1 !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn:disabled {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn:disabled {
   opacity: .38 !important;
   cursor: not-allowed !important;
   box-shadow: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn.is-translated {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn.is-translated {
   background: linear-gradient(135deg, #059669, #0ea5e9) !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn.is-loading span {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn.is-loading span {
   font-size: 0 !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-translate-btn.is-loading::after {
+.twai-floating-chatbot-component .twai-chatbot-translate-btn.is-loading::after {
   content: "";
   width: 13px;
   height: 13px;
   border: 2px solid rgba(255, 255, 255, .42);
   border-top-color: #fff;
   border-radius: 50%;
-  animation: VNN-chat-translate-spin .75s linear infinite;
+  animation: twai-chat-translate-spin .75s linear infinite;
 }
 
 
-.VNN-floating-chatbot-component .admin-support-message-bubble .ai-message-translation {
+.twai-floating-chatbot-component .admin-support-message-bubble .ai-message-translation {
   display: block;
   margin-top: 6px;
   padding-top: 6px;
@@ -872,16 +872,16 @@ html[data-vnova-theme="dark"] .VNN-floating-chatbot-component * {
   opacity: .88;
 }
 
-.VNN-floating-chatbot-component .admin-support-message-row.sent .ai-message-translation {
+.twai-floating-chatbot-component .admin-support-message-row.sent .ai-message-translation {
   border-top-color: rgba(255, 255, 255, .28);
 }
 
-@keyframes VNN-chat-translate-spin {
+@keyframes twai-chat-translate-spin {
   to { transform: rotate(360deg); }
 }
 
 
-.VNN-floating-chatbot-component .VNN-chatbot-title-row,
+.twai-floating-chatbot-component .twai-chatbot-title-row,
 .conversation-name-row {
   position: relative;
 }
@@ -1121,11 +1121,11 @@ html[data-vnova-theme="dark"] .VNN-floating-chatbot-component * {
 body.chatbot-style-store-open { overflow: hidden; }
 
 @media (max-width: 420px) {
-  .VNN-floating-chatbot-component .VNN-chatbot-input-shell {
+  .twai-floating-chatbot-component .twai-chatbot-input-shell {
     gap: 5px;
   }
 
-  .VNN-floating-chatbot-component .VNN-chatbot-translate-btn {
+  .twai-floating-chatbot-component .twai-chatbot-translate-btn {
     min-width: 52px !important;
     flex-basis: 52px !important;
     padding-inline: 7px !important;
@@ -1133,14 +1133,14 @@ body.chatbot-style-store-open { overflow: hidden; }
 }
 
 /* Loading icon is also the stop control while V-Go is generating. */
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-loading.is-ai-stop {
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-loading.is-ai-stop {
   cursor: pointer !important;
   opacity: 1 !important;
   transform: none !important;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-loading.is-ai-stop:hover::after,
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-loading.is-ai-stop:focus-visible::after {
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-loading.is-ai-stop:hover::after,
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-loading.is-ai-stop:focus-visible::after {
   width: 12px;
   height: 12px;
   border: 0;
@@ -1149,7 +1149,7 @@ body.chatbot-style-store-open { overflow: hidden; }
   animation: none;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-send-btn.is-stopping {
+.twai-floating-chatbot-component .twai-chatbot-send-btn.is-stopping {
   cursor: wait !important;
   opacity: 0.72 !important;
 }
@@ -1160,28 +1160,28 @@ body.chatbot-style-store-open { overflow: hidden; }
 /* ---- Touch / keyboard behaviour (phones) ---------------------------------
    Only the message list pans vertically; touches elsewhere in the panel must
    not scroll the page behind it. The header is a drag handle (needs none). */
-.VNN-floating-chatbot-component .VNN-chatbot-view,
-.VNN-floating-chatbot-component .VNN-chatbot-header,
-.VNN-floating-chatbot-component .VNN-chatbot-body,
-.VNN-floating-chatbot-component .VNN-chatbot-input-area {
+.twai-floating-chatbot-component .twai-chatbot-view,
+.twai-floating-chatbot-component .twai-chatbot-header,
+.twai-floating-chatbot-component .twai-chatbot-body,
+.twai-floating-chatbot-component .twai-chatbot-input-area {
   touch-action: none;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-messages {
+.twai-floating-chatbot-component .twai-chatbot-messages {
   touch-action: pan-y;
 }
 
-.VNN-floating-chatbot-component .VNN-chatbot-suggestions,
-.VNN-floating-chatbot-component .VNN-chatbot-image-preview {
+.twai-floating-chatbot-component .twai-chatbot-suggestions,
+.twai-floating-chatbot-component .twai-chatbot-image-preview {
   touch-action: pan-x pan-y;
 }
 
 /* Keep the panel above the on-screen keyboard (set by visualViewport in JS). */
 @media (max-width: 640px) {
-  html.VNN-kb-open .VNN-floating-chatbot-component .VNN-chatbot-view {
-    bottom: calc(var(--VNN-kb-inset, 0px) + 8px) !important;
-    height: calc(var(--VNN-vv-h, 100dvh) - 16px) !important;
-    max-height: calc(var(--VNN-vv-h, 100dvh) - 16px) !important;
+  html.twai-kb-open .twai-floating-chatbot-component .twai-chatbot-view {
+    bottom: calc(var(--twai-kb-inset, 0px) + 8px) !important;
+    height: calc(var(--twai-vv-h, 100dvh) - 16px) !important;
+    max-height: calc(var(--twai-vv-h, 100dvh) - 16px) !important;
     min-height: 0 !important;
   }
 }

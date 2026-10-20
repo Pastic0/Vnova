@@ -1437,10 +1437,10 @@ body.messaging-page {
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  color: var(--VNN-text, #172033);
+  color: var(--twai-text, #172033);
   background:
     linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(37, 99, 235, 0.36)),
-    var(--VNN-page-bg-image) center / cover fixed no-repeat;
+    var(--twai-page-bg-image) center / cover fixed no-repeat;
 }
 
 body.messaging-page::before {
@@ -3275,7 +3275,7 @@ body.messaging-page .messaging-layout {
   }
 
   body.messaging-page.mobile-conversation-open .messaging-container {
-    height: calc(100dvh - var(--VNN-mobile-header-height, 0px) - 12px) !important;
+    height: calc(100dvh - var(--twai-mobile-header-height, 0px) - 12px) !important;
     margin: 6px auto !important;
   }
 

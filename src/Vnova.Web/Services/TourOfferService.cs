@@ -621,7 +621,7 @@ public sealed class TourOfferService
             result[i] = chars[bytes[i] % chars.Length];
         }
 
-        return "VNN-" + new string(result);
+        return "TWAI-" + new string(result);
     }
 
     private static string BuildInviteDocumentId(string inviterId, string email)

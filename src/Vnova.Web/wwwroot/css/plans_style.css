@@ -1,7 +1,7 @@
 body.plans-page {
   background:
     linear-gradient(135deg, rgba(15, 23, 42, 0.76), rgba(37, 99, 235, 0.36)),
-    var(--VNN-page-bg-image) center / cover fixed no-repeat;
+    var(--twai-page-bg-image) center / cover fixed no-repeat;
 }
 
 .plans-hero {

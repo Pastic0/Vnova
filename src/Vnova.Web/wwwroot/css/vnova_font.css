@@ -75,12 +75,12 @@ svg * {
   font-family: "Font Awesome 6 Brands" !important;
 }
 :root {
-  --VNN-page-title-size: clamp(2.15rem, 3.05vw, 3.05rem);
-  --VNN-page-title-line: 1.08;
-  --VNN-page-title-spacing: -0.035em;
-  --VNN-page-eyebrow-size: 0.86rem;
-  --VNN-section-title-size: clamp(1.18rem, 1.6vw, 1.45rem);
-  --VNN-modal-title-size: clamp(1.25rem, 2vw, 1.65rem);
+  --twai-page-title-size: clamp(2.15rem, 3.05vw, 3.05rem);
+  --twai-page-title-line: 1.08;
+  --twai-page-title-spacing: -0.035em;
+  --twai-page-eyebrow-size: 0.86rem;
+  --twai-section-title-size: clamp(1.18rem, 1.6vw, 1.45rem);
+  --twai-modal-title-size: clamp(1.25rem, 2vw, 1.65rem);
 }
 
 html,
@@ -126,10 +126,10 @@ button {
 .profile-hero h1,
 body.contact-page .content .province-hero h1 {
   font-family: var(--vnova-font) !important;
-  font-size: var(--VNN-page-title-size) !important;
-  line-height: var(--VNN-page-title-line) !important;
+  font-size: var(--twai-page-title-size) !important;
+  line-height: var(--twai-page-title-line) !important;
   font-weight: 900 !important;
-  letter-spacing: var(--VNN-page-title-spacing) !important;
+  letter-spacing: var(--twai-page-title-spacing) !important;
   margin-top: 0 !important;
 }
 
@@ -142,7 +142,7 @@ body.contact-page .content .province-hero h1 {
 .profile-hero .eyebrow,
 body.contact-page .content .province-hero .eyebrow {
   font-family: var(--vnova-font) !important;
-  font-size: var(--VNN-page-eyebrow-size) !important;
+  font-size: var(--twai-page-eyebrow-size) !important;
   line-height: 1.2 !important;
   font-weight: 900 !important;
   letter-spacing: 0.12em !important;
@@ -162,7 +162,7 @@ body.contact-page .content .province-hero .eyebrow {
 #detailTitle,
 #dayPlanTitle {
   font-family: var(--vnova-font) !important;
-  font-size: var(--VNN-section-title-size) !important;
+  font-size: var(--twai-section-title-size) !important;
   line-height: 1.25 !important;
   font-weight: 900 !important;
   letter-spacing: -0.02em !important;
@@ -174,7 +174,7 @@ body.contact-page .content .province-hero .eyebrow {
 #dayPlanTitle,
 .modal-card > h2,
 .modal-content > h2 {
-  font-size: var(--VNN-modal-title-size) !important;
+  font-size: var(--twai-modal-title-size) !important;
 }
 
 .title,
@@ -194,18 +194,18 @@ body.contact-page .content .province-hero .eyebrow {
 
 @media (max-width: 768px) {
   :root {
-    --VNN-page-title-size: clamp(1.72rem, 7vw, 2.25rem);
-    --VNN-section-title-size: clamp(1.05rem, 4.6vw, 1.28rem);
-    --VNN-modal-title-size: clamp(1.15rem, 5vw, 1.42rem);
+    --twai-page-title-size: clamp(1.72rem, 7vw, 2.25rem);
+    --twai-section-title-size: clamp(1.05rem, 4.6vw, 1.28rem);
+    --twai-modal-title-size: clamp(1.15rem, 5vw, 1.42rem);
   }
 }
 
 .province-name {
   font-family: var(--vnova-font) !important;
-  font-size: var(--VNN-page-title-size) !important;
-  line-height: var(--VNN-page-title-line) !important;
+  font-size: var(--twai-page-title-size) !important;
+  line-height: var(--twai-page-title-line) !important;
   font-weight: 900 !important;
-  letter-spacing: var(--VNN-page-title-spacing) !important;
+  letter-spacing: var(--twai-page-title-spacing) !important;
 }
 .province-hero .eyebrow,
 .content .province-hero .eyebrow,
@@ -404,13 +404,13 @@ svg tspan {
 
 :root {
   --vnova-font: Tahoma, "Segoe UI", Arial, sans-serif;
-  --VNN-page-bg-light: url("/main_site_image/vnova-bg-light.webp");
-  --VNN-page-bg-dark: url("/main_site_image/vnova-bg-dark.webp");
-  --VNN-page-bg-image: var(--VNN-page-bg-light);
+  --twai-page-bg-light: url("/main_site_image/vnova-bg-light.webp");
+  --twai-page-bg-dark: url("/main_site_image/vnova-bg-dark.webp");
+  --twai-page-bg-image: var(--twai-page-bg-light);
 }
 
 html[data-vnova-theme="dark"] {
-  --VNN-page-bg-image: var(--VNN-page-bg-dark);
+  --twai-page-bg-image: var(--twai-page-bg-dark);
 }
 
 html,
@@ -496,7 +496,7 @@ p, li, label, td, th, textarea,
 }
 
 html body {
-  background-image: var(--VNN-page-bg-image) !important;
+  background-image: var(--twai-page-bg-image) !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -505,7 +505,7 @@ html body {
 
 .background-slider,
 .landing-background-slider {
-  background-image: var(--VNN-page-bg-image) !important;
+  background-image: var(--twai-page-bg-image) !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -518,7 +518,7 @@ html body {
   animation: none !important;
 }
 
-.VNN-floating-tools-zone {
+.twai-floating-tools-zone {
   position: fixed;
   right: 18px;
   top: 74px;
@@ -533,7 +533,7 @@ html body {
   z-index: 2147483000;
 }
 
-.VNN-theme-toggle {
+.twai-theme-toggle {
   width: 54px;
   height: 54px;
   border: 1px solid rgba(255, 255, 255, 0.58);
@@ -554,54 +554,54 @@ html body {
   transition: opacity 0.16s ease, visibility 0.16s ease, transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
 }
 
-.VNN-tool-action {
+.twai-tool-action {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-8px) scale(0.96);
 }
 
-.VNN-tools-reveal-toggle {
+.twai-tools-reveal-toggle {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
-.VNN-floating-tools-zone:hover .VNN-tools-reveal-toggle,
-.VNN-floating-tools-zone:focus-within .VNN-tools-reveal-toggle {
+.twai-floating-tools-zone:hover .twai-tools-reveal-toggle,
+.twai-floating-tools-zone:focus-within .twai-tools-reveal-toggle {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-8px) scale(0.94);
 }
 
-.VNN-floating-tools-zone:hover .VNN-tool-action,
-.VNN-floating-tools-zone:focus-within .VNN-tool-action,
-.VNN-tool-action:focus-visible {
+.twai-floating-tools-zone:hover .twai-tool-action,
+.twai-floating-tools-zone:focus-within .twai-tool-action,
+.twai-tool-action:focus-visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
-.VNN-theme-toggle:hover {
+.twai-theme-toggle:hover {
   transform: translateY(-2px) scale(1.03);
   background: rgba(14, 165, 233, 0.86);
   box-shadow: 0 22px 52px rgba(14, 165, 233, 0.28);
 }
 
-.VNN-theme-toggle:active {
+.twai-theme-toggle:active {
   transform: translateY(0) scale(0.98);
 }
 
-html[data-vnova-theme="dark"] .VNN-theme-toggle {
+html[data-vnova-theme="dark"] .twai-theme-toggle {
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone {
+  .twai-floating-tools-zone {
     right: 8px;
     top: 68px;
     width: 64px;
@@ -609,14 +609,14 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
     gap: 8px;
   }
 
-  .VNN-theme-toggle {
+  .twai-theme-toggle {
     width: 48px;
     height: 48px;
     font-size: 22px;
   }
 }
 
-.VNN-floating-tools-zone {
+.twai-floating-tools-zone {
   right: 18px !important;
   top: 50% !important;
   bottom: auto !important;
@@ -630,17 +630,17 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   transform: translateY(-50%) !important;
 }
 
-.VNN-floating-tools-zone:hover,
-.VNN-floating-tools-zone:focus-within {
+.twai-floating-tools-zone:hover,
+.twai-floating-tools-zone:focus-within {
   min-height: 294px !important;
 }
 
-.VNN-theme-toggle {
+.twai-theme-toggle {
   width: 54px !important;
   height: 54px !important;
 }
 
-.VNN-tools-reveal-toggle {
+.twai-tools-reveal-toggle {
   position: absolute !important;
   inset: 5px auto auto 5px !important;
   opacity: 1 !important;
@@ -649,15 +649,15 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   transform: none !important;
 }
 
-.VNN-floating-tools-zone:hover .VNN-tools-reveal-toggle,
-.VNN-floating-tools-zone:focus-within .VNN-tools-reveal-toggle {
+.twai-floating-tools-zone:hover .twai-tools-reveal-toggle,
+.twai-floating-tools-zone:focus-within .twai-tools-reveal-toggle {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
   transform: scale(0.92) !important;
 }
 
-.VNN-tool-action {
+.twai-tool-action {
   position: relative !important;
   opacity: 0 !important;
   visibility: hidden !important;
@@ -665,9 +665,9 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   transform: translateX(8px) scale(0.96) !important;
 }
 
-.VNN-floating-tools-zone:hover .VNN-tool-action,
-.VNN-floating-tools-zone:focus-within .VNN-tool-action,
-.VNN-tool-action:focus-visible {
+.twai-floating-tools-zone:hover .twai-tool-action,
+.twai-floating-tools-zone:focus-within .twai-tool-action,
+.twai-tool-action:focus-visible {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
@@ -675,22 +675,22 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone {
+  .twai-floating-tools-zone {
     right: 8px !important;
     top: 50% !important;
     width: 58px !important;
   }
 
-  .VNN-theme-toggle {
+  .twai-theme-toggle {
     width: 48px !important;
     height: 48px !important;
   }
 }
-.VNN-theme-toggle {
+.twai-theme-toggle {
   position: relative !important;
 }
 
-.VNN-floating-tools-zone {
+.twai-floating-tools-zone {
   right: 14px !important;
   top: 50% !important;
   width: 66px !important;
@@ -701,7 +701,7 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   background: transparent !important;
 }
 
-.VNN-floating-tools-zone::before {
+.twai-floating-tools-zone::before {
   content: "";
   position: absolute;
   right: 3px;
@@ -715,53 +715,53 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   transition: opacity .16s ease, background .16s ease, width .16s ease;
 }
 
-.VNN-floating-tools-zone:hover::before,
-.VNN-floating-tools-zone:focus-within::before {
+.twai-floating-tools-zone:hover::before,
+.twai-floating-tools-zone:focus-within::before {
   opacity: .18;
   width: 3px;
   background: rgba(125,211,252,.72);
 }
 
-.VNN-tools-reveal-toggle,
+.twai-tools-reveal-toggle,
 #vnovaToolsRevealButton {
   display: none !important;
 }
 
-.VNN-tool-action {
+.twai-tool-action {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
   transform: translateX(16px) scale(.92) !important;
 }
 
-.VNN-floating-tools-zone:hover .VNN-tool-action,
-.VNN-floating-tools-zone:focus-within .VNN-tool-action,
-.VNN-tool-action:focus-visible {
+.twai-floating-tools-zone:hover .twai-tool-action,
+.twai-floating-tools-zone:focus-within .twai-tool-action,
+.twai-tool-action:focus-visible {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
   transform: translateX(0) scale(1) !important;
 }
 
-.VNN-theme-toggle {
+.twai-theme-toggle {
   width: 54px !important;
   height: 54px !important;
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone {
+  .twai-floating-tools-zone {
     right: 6px !important;
     width: 58px !important;
     min-height: 286px !important;
   }
 
-  .VNN-floating-tools-zone::before {
+  .twai-floating-tools-zone::before {
     right: 1px;
   }
 }
 
 
-.VNN-pricing-popup {
+.twai-pricing-popup {
   position: fixed;
   inset: 0;
   display: none;
@@ -772,8 +772,8 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   backdrop-filter: blur(16px) saturate(1.08);
   -webkit-backdrop-filter: blur(16px) saturate(1.08);
 }
-.VNN-pricing-popup.open { display: grid; }
-.VNN-pricing-popup-card {
+.twai-pricing-popup.open { display: grid; }
+.twai-pricing-popup-card {
   position: relative;
   width: min(1280px, 100%);
   max-height: 92vh;
@@ -784,26 +784,26 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 34px 110px rgba(2, 6, 23, .24);
   padding: clamp(18px, 2.2vw, 30px);
 }
-.VNN-pricing-heading { margin: 0 46px 20px 0; color: #0f172a; }
-.VNN-pricing-heading h2 { margin: 6px 0 6px; font-size: clamp(26px, 3vw, 42px); }
-.VNN-pricing-heading p { margin: 0; color: #64748b; font-weight: 700; }
-.VNN-pricing-grid { display: grid; grid-template-columns: repeat(5, minmax(190px, 1fr)); gap: clamp(14px, 1.4vw, 22px); }
-.VNN-price-card { position: relative; min-height: 520px; border: 1px solid rgba(15, 23, 42, .14); border-radius: 24px; background: rgba(255,255,255,.96); color: #111827; padding: 28px 24px; display: flex; flex-direction: column; box-shadow: 0 16px 42px rgba(15, 23, 42, .10); }
-.VNN-price-card.is-featured { border-color: #111827; box-shadow: 0 20px 54px rgba(15, 23, 42, .16); }
-.VNN-price-ribbon { position: absolute; top: -15px; left: 28px; border-radius: 999px; padding: 7px 16px; background: #111827; color: #fff; font-size: 11px; font-weight: 950; letter-spacing: .18em; }
-.VNN-price-card h3 { margin: 6px 0 24px; font-size: 24px; }
-.VNN-price-card strong { font-size: clamp(28px, 2.8vw, 42px); line-height: 1; }
-.VNN-price-subtitle { margin: 10px 0 8px; color: #94a3b8; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 900; }
-.VNN-price-card em { color: #57534e; font-size: 14px; }
-.VNN-price-card ul { margin: 26px 0 28px; padding: 24px 0 0 18px; border-top: 1px solid rgba(15,23,42,.12); display: grid; gap: 13px; color: #475569; line-height: 1.45; }
-.VNN-price-card li::marker { color: #16a34a; }
-.VNN-price-cta { margin-top: auto; min-height: 48px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; border: 1px solid rgba(15,23,42,.16); background: #fff; color: #111827; font-weight: 950; }
-.VNN-price-cta.primary { background: #111827; color: #fff; border-color: #111827; }
-@media (max-width: 1180px) { .VNN-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .VNN-pricing-grid { grid-template-columns: 1fr; } .VNN-price-card { min-height: auto; } }
+.twai-pricing-heading { margin: 0 46px 20px 0; color: #0f172a; }
+.twai-pricing-heading h2 { margin: 6px 0 6px; font-size: clamp(26px, 3vw, 42px); }
+.twai-pricing-heading p { margin: 0; color: #64748b; font-weight: 700; }
+.twai-pricing-grid { display: grid; grid-template-columns: repeat(5, minmax(190px, 1fr)); gap: clamp(14px, 1.4vw, 22px); }
+.twai-price-card { position: relative; min-height: 520px; border: 1px solid rgba(15, 23, 42, .14); border-radius: 24px; background: rgba(255,255,255,.96); color: #111827; padding: 28px 24px; display: flex; flex-direction: column; box-shadow: 0 16px 42px rgba(15, 23, 42, .10); }
+.twai-price-card.is-featured { border-color: #111827; box-shadow: 0 20px 54px rgba(15, 23, 42, .16); }
+.twai-price-ribbon { position: absolute; top: -15px; left: 28px; border-radius: 999px; padding: 7px 16px; background: #111827; color: #fff; font-size: 11px; font-weight: 950; letter-spacing: .18em; }
+.twai-price-card h3 { margin: 6px 0 24px; font-size: 24px; }
+.twai-price-card strong { font-size: clamp(28px, 2.8vw, 42px); line-height: 1; }
+.twai-price-subtitle { margin: 10px 0 8px; color: #94a3b8; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 900; }
+.twai-price-card em { color: #57534e; font-size: 14px; }
+.twai-price-card ul { margin: 26px 0 28px; padding: 24px 0 0 18px; border-top: 1px solid rgba(15,23,42,.12); display: grid; gap: 13px; color: #475569; line-height: 1.45; }
+.twai-price-card li::marker { color: #16a34a; }
+.twai-price-cta { margin-top: auto; min-height: 48px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; border: 1px solid rgba(15,23,42,.16); background: #fff; color: #111827; font-weight: 950; }
+.twai-price-cta.primary { background: #111827; color: #fff; border-color: #111827; }
+@media (max-width: 1180px) { .twai-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .twai-pricing-grid { grid-template-columns: 1fr; } .twai-price-card { min-height: auto; } }
 
 
-.VNN-pricing-popup {
+.twai-pricing-popup {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -811,7 +811,7 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   justify-items: center !important;
   padding: 18px !important;
 }
-.VNN-pricing-popup-card {
+.twai-pricing-popup-card {
   width: min(1080px, calc(100vw - 28px)) !important;
   max-height: 90vh !important;
   border-radius: 22px !important;
@@ -819,68 +819,68 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   background: rgba(255, 255, 255, .98) !important;
   box-shadow: 0 18px 56px rgba(15, 23, 42, .18) !important;
 }
-.VNN-pricing-heading {
+.twai-pricing-heading {
   margin: 0 42px 14px 0 !important;
 }
-.VNN-pricing-heading .eyebrow {
+.twai-pricing-heading .eyebrow {
   font-size: 11px !important;
   letter-spacing: .14em !important;
 }
-.VNN-pricing-heading h2 {
+.twai-pricing-heading h2 {
   margin: 4px 0 !important;
   font-size: clamp(20px, 2.1vw, 28px) !important;
   line-height: 1.18 !important;
 }
-.VNN-pricing-heading p {
+.twai-pricing-heading p {
   font-size: 13px !important;
   line-height: 1.35 !important;
 }
-.VNN-pricing-grid {
+.twai-pricing-grid {
   display: grid !important;
   grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
   gap: 14px !important;
   align-items: stretch !important;
 }
-.VNN-price-card {
+.twai-price-card {
   grid-column: span 2 !important;
   min-height: 0 !important;
   border-radius: 18px !important;
   padding: 18px !important;
   box-shadow: 0 10px 26px rgba(15, 23, 42, .08) !important;
 }
-.VNN-price-card-sales {
+.twai-price-card-sales {
   grid-column: 2 / span 2 !important;
 }
-.VNN-price-card-company {
+.twai-price-card-company {
   grid-column: 4 / span 2 !important;
 }
-.VNN-price-card h3 {
+.twai-price-card h3 {
   margin: 0 0 12px !important;
   font-size: 20px !important;
 }
-.VNN-price-card strong {
+.twai-price-card strong {
   font-size: clamp(24px, 2.1vw, 32px) !important;
 }
-.VNN-price-subtitle {
+.twai-price-subtitle {
   margin: 8px 0 6px !important;
   font-size: 10px !important;
   letter-spacing: .13em !important;
 }
-.VNN-price-card em {
+.twai-price-card em {
   font-size: 13px !important;
 }
-.VNN-price-card ul {
+.twai-price-card ul {
   margin: 16px 0 18px !important;
   padding: 16px 0 0 17px !important;
   gap: 8px !important;
   line-height: 1.35 !important;
   font-size: 14px !important;
 }
-.VNN-price-cta {
+.twai-price-cta {
   min-height: 42px !important;
   font-size: 14px !important;
 }
-.VNN-price-ribbon {
+.twai-price-ribbon {
   top: -12px !important;
   left: 18px !important;
   padding: 5px 12px !important;
@@ -888,26 +888,26 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   letter-spacing: .13em !important;
 }
 @media (max-width: 900px) {
-  .VNN-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-  .VNN-price-card,
-  .VNN-price-card-sales,
-  .VNN-price-card-company { grid-column: auto !important; }
+  .twai-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .twai-price-card,
+  .twai-price-card-sales,
+  .twai-price-card-company { grid-column: auto !important; }
 }
 @media (max-width: 620px) {
-  .VNN-pricing-popup { padding: 10px !important; }
-  .VNN-pricing-popup-card { width: calc(100vw - 16px) !important; padding: 14px !important; }
-  .VNN-pricing-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
-  .VNN-price-card { padding: 14px !important; }
+  .twai-pricing-popup { padding: 10px !important; }
+  .twai-pricing-popup-card { width: calc(100vw - 16px) !important; padding: 14px !important; }
+  .twai-pricing-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .twai-price-card { padding: 14px !important; }
 }
 
-.VNN-pricing-footer {
+.twai-pricing-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 18px;
 }
 
-.VNN-pricing-bottom-close {
+.twai-pricing-bottom-close {
   border: 0;
   border-radius: 999px;
   padding: 10px 28px;
@@ -919,10 +919,10 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
 }
 
-.VNN-pricing-bottom-close:hover {
+.twai-pricing-bottom-close:hover {
   transform: translateY(-1px);
 }
-.VNN-chatbot-tool-icon { width: 25px; height: 25px; display: block; object-fit: contain; pointer-events: none; }
+.twai-chatbot-tool-icon { width: 25px; height: 25px; display: block; object-fit: contain; pointer-events: none; }
 
 
 .interface-icon,
@@ -945,7 +945,7 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
 }
 
 
-.VNN-theme-toggle.VNN-chatbot-launcher {
+.twai-theme-toggle.twai-chatbot-launcher {
   position: fixed !important;
   right: max(18px, env(safe-area-inset-right)) !important;
   bottom: max(18px, env(safe-area-inset-bottom)) !important;
@@ -963,36 +963,36 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 18px 44px rgba(3, 91, 184, .38) !important;
 }
 
-.VNN-theme-toggle.VNN-chatbot-launcher:hover {
+.twai-theme-toggle.twai-chatbot-launcher:hover {
   transform: translateY(-3px) scale(1.04) !important;
   box-shadow: 0 22px 52px rgba(3, 91, 184, .46) !important;
 }
 
-.VNN-theme-toggle.VNN-chatbot-launcher:active {
+.twai-theme-toggle.twai-chatbot-launcher:active {
   transform: translateY(0) scale(.98) !important;
 }
 
-.VNN-chatbot-launcher .VNN-chatbot-tool-icon {
+.twai-chatbot-launcher .twai-chatbot-tool-icon {
   width: 31px;
   height: 31px;
 }
 
 @media (max-width: 640px) {
-  .VNN-theme-toggle.VNN-chatbot-launcher {
+  .twai-theme-toggle.twai-chatbot-launcher {
     right: max(10px, env(safe-area-inset-right)) !important;
     bottom: max(10px, env(safe-area-inset-bottom)) !important;
     width: 42px !important;
     height: 42px !important;
   }
 
-  .VNN-chatbot-launcher .VNN-chatbot-tool-icon {
+  .twai-chatbot-launcher .twai-chatbot-tool-icon {
     width: 24px;
     height: 24px;
   }
 }
 
 
-.VNN-tool-action,
+.twai-tool-action,
 #vnovaReloadButton,
 #vnovaCacheClearButton,
 #vnovaThemeToggle {
@@ -1002,7 +1002,7 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 18px 42px rgba(2, 6, 23, 0.38) !important;
 }
 
-.VNN-tool-action:hover,
+.twai-tool-action:hover,
 #vnovaReloadButton:hover,
 #vnovaCacheClearButton:hover,
 #vnovaThemeToggle:hover {
@@ -1010,7 +1010,7 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 20px 48px rgba(2, 6, 23, 0.46) !important;
 }
 
-.VNN-theme-toggle.VNN-chatbot-launcher {
+.twai-theme-toggle.twai-chatbot-launcher {
   overflow: hidden !important;
   padding: 0 !important;
   background: rgba(2, 6, 23, 0.92) !important;
@@ -1018,12 +1018,12 @@ html[data-vnova-theme="dark"] .VNN-theme-toggle {
   box-shadow: 0 22px 54px rgba(2, 6, 23, 0.42) !important;
 }
 
-.VNN-theme-toggle.VNN-chatbot-launcher:hover {
+.twai-theme-toggle.twai-chatbot-launcher:hover {
   background: rgba(2, 6, 23, 0.98) !important;
   box-shadow: 0 26px 60px rgba(2, 6, 23, 0.48) !important;
 }
 
-.VNN-chatbot-launcher .VNN-chatbot-tool-icon {
+.twai-chatbot-launcher .twai-chatbot-tool-icon {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -1039,8 +1039,8 @@ img[data-site-logo] {
   overflow: hidden;
 }
 
-.VNN-chatbot-avatar,
-.VNN-chatbot-tool-icon,
+.twai-chatbot-avatar,
+.twai-chatbot-tool-icon,
 .logo img[data-site-logo],
 .landing-logo img[data-site-logo] {
   border-radius: 50% !important;
@@ -1082,17 +1082,17 @@ img[data-site-logo].site-logo-ready {
   visibility: visible !important;
 }
 
-.VNN-chatbot-launcher .chatbot-brand-avatar {
+.twai-chatbot-launcher .chatbot-brand-avatar {
   box-shadow: none !important;
 }
 
 
-.VNN-floating-tools-zone:hover,
-.VNN-floating-tools-zone:focus-within {
+.twai-floating-tools-zone:hover,
+.twai-floating-tools-zone:focus-within {
   min-height: 326px !important;
 }
 
-.VNN-language-choice {
+.twai-language-choice {
   font-size: 14px !important;
   font-weight: 950 !important;
   letter-spacing: .02em !important;
@@ -1101,35 +1101,35 @@ img[data-site-logo].site-logo-ready {
   border-color: rgba(255, 255, 255, .18) !important;
 }
 
-.VNN-language-choice.active {
+.twai-language-choice.active {
   color: #ffffff !important;
   background: linear-gradient(135deg, #0ea5e9, #2563eb) !important;
   border-color: rgba(255, 255, 255, .7) !important;
   box-shadow: 0 12px 26px rgba(37, 99, 235, .4) !important;
 }
 
-.VNN-language-choice:focus-visible {
+.twai-language-choice:focus-visible {
   outline: 3px solid rgba(125, 211, 252, .55) !important;
   outline-offset: 2px !important;
 }
 
-html.VNN-language-translating #vnovaLanguageToggle {
+html.twai-language-translating #vnovaLanguageToggle {
   cursor: progress !important;
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone:hover,
-  .VNN-floating-tools-zone:focus-within {
+  .twai-floating-tools-zone:hover,
+  .twai-floating-tools-zone:focus-within {
     min-height: 278px !important;
   }
 
-  .VNN-language-choice {
+  .twai-language-choice {
     font-size: 12px !important;
   }
 }
 
 /* Floating quick tools: one launcher above the V-Go chatbot, actions expand upward. */
-.VNN-floating-tools-zone {
+.twai-floating-tools-zone {
   position: fixed !important;
   right: max(18px, env(safe-area-inset-right)) !important;
   bottom: max(88px, calc(env(safe-area-inset-bottom) + 78px)) !important;
@@ -1147,11 +1147,11 @@ html.VNN-language-translating #vnovaLanguageToggle {
   overflow: visible !important;
 }
 
-.VNN-floating-tools-zone::before {
+.twai-floating-tools-zone::before {
   display: none !important;
 }
 
-.VNN-floating-tools-zone .VNN-tools-reveal-toggle,
+.twai-floating-tools-zone .twai-tools-reveal-toggle,
 #vnovaToolsRevealButton {
   position: absolute !important;
   right: 0 !important;
@@ -1179,24 +1179,24 @@ html.VNN-language-translating #vnovaLanguageToggle {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease !important;
 }
 
-.VNN-floating-tools-zone .VNN-tools-reveal-toggle:hover,
-.VNN-floating-tools-zone .VNN-tools-reveal-toggle:focus-visible,
-.VNN-floating-tools-zone.is-open .VNN-tools-reveal-toggle {
+.twai-floating-tools-zone .twai-tools-reveal-toggle:hover,
+.twai-floating-tools-zone .twai-tools-reveal-toggle:focus-visible,
+.twai-floating-tools-zone.is-open .twai-tools-reveal-toggle {
   transform: translateY(-3px) scale(1.04) !important;
   border-color: rgba(255, 255, 255, 0.92) !important;
   box-shadow: 0 24px 62px rgba(8, 101, 189, 0.42) !important;
 }
 
-.VNN-floating-tools-zone .VNN-tools-reveal-toggle .interface-icon {
+.twai-floating-tools-zone .twai-tools-reveal-toggle .interface-icon {
   width: 28px !important;
   height: 28px !important;
   stroke-width: 2.4px !important;
 }
 
-.VNN-floating-tools-zone .VNN-tool-action {
+.twai-floating-tools-zone .twai-tool-action {
   position: absolute !important;
   right: 3px !important;
-  bottom: calc(var(--VNN-tool-index, 1) * 66px) !important;
+  bottom: calc(var(--twai-tool-index, 1) * 66px) !important;
   top: auto !important;
   left: auto !important;
   width: 54px !important;
@@ -1209,26 +1209,26 @@ html.VNN-language-translating #vnovaLanguageToggle {
   transition: opacity .17s ease, visibility .17s ease, transform .17s ease, background .17s ease, box-shadow .17s ease !important;
 }
 
-.VNN-floating-tools-zone:hover .VNN-tool-action,
-.VNN-floating-tools-zone:focus-within .VNN-tool-action,
-.VNN-floating-tools-zone.is-open .VNN-tool-action,
-.VNN-floating-tools-zone .VNN-tool-action:focus-visible {
+.twai-floating-tools-zone:hover .twai-tool-action,
+.twai-floating-tools-zone:focus-within .twai-tool-action,
+.twai-floating-tools-zone.is-open .twai-tool-action,
+.twai-floating-tools-zone .twai-tool-action:focus-visible {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
   transform: translateY(0) scale(1) !important;
 }
 
-.VNN-floating-tools-zone:hover .VNN-tools-reveal-toggle,
-.VNN-floating-tools-zone:focus-within .VNN-tools-reveal-toggle,
-.VNN-floating-tools-zone.is-open .VNN-tools-reveal-toggle {
+.twai-floating-tools-zone:hover .twai-tools-reveal-toggle,
+.twai-floating-tools-zone:focus-within .twai-tools-reveal-toggle,
+.twai-floating-tools-zone.is-open .twai-tools-reveal-toggle {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone {
+  .twai-floating-tools-zone {
     right: max(10px, env(safe-area-inset-right)) !important;
     bottom: max(58px, calc(env(safe-area-inset-bottom) + 48px)) !important;
     width: 42px !important;
@@ -1236,20 +1236,20 @@ html.VNN-language-translating #vnovaLanguageToggle {
     min-height: 42px !important;
   }
 
-  .VNN-floating-tools-zone .VNN-tools-reveal-toggle,
+  .twai-floating-tools-zone .twai-tools-reveal-toggle,
   #vnovaToolsRevealButton {
     width: 42px !important;
     height: 42px !important;
   }
 
-  .VNN-floating-tools-zone .VNN-tools-reveal-toggle .interface-icon {
+  .twai-floating-tools-zone .twai-tools-reveal-toggle .interface-icon {
     width: 22px !important;
     height: 22px !important;
   }
 
-  .VNN-floating-tools-zone .VNN-tool-action {
+  .twai-floating-tools-zone .twai-tool-action {
     right: 1px !important;
-    bottom: calc(var(--VNN-tool-index, 1) * 46px) !important;
+    bottom: calc(var(--twai-tool-index, 1) * 46px) !important;
     width: 40px !important;
     height: 40px !important;
     font-size: 18px !important;
@@ -1257,7 +1257,7 @@ html.VNN-language-translating #vnovaLanguageToggle {
 }
 
 /* Keep the hover path continuous while moving from the launcher to expanded tools. */
-.VNN-floating-tools-zone::after {
+.twai-floating-tools-zone::after {
   content: "";
   position: absolute;
   right: 0;
@@ -1269,23 +1269,23 @@ html.VNN-language-translating #vnovaLanguageToggle {
   z-index: 0;
 }
 
-.VNN-floating-tools-zone:hover::after,
-.VNN-floating-tools-zone:focus-within::after,
-.VNN-floating-tools-zone.is-open::after {
+.twai-floating-tools-zone:hover::after,
+.twai-floating-tools-zone:focus-within::after,
+.twai-floating-tools-zone.is-open::after {
   pointer-events: auto;
 }
 
-.VNN-floating-tools-zone .VNN-tool-action {
+.twai-floating-tools-zone .twai-tool-action {
   z-index: 2 !important;
 }
 
-.VNN-floating-tools-zone .VNN-tools-reveal-toggle,
+.twai-floating-tools-zone .twai-tools-reveal-toggle,
 #vnovaToolsRevealButton {
   z-index: 3 !important;
 }
 
 @media (max-width: 640px) {
-  .VNN-floating-tools-zone::after {
+  .twai-floating-tools-zone::after {
     bottom: 34px;
     width: 42px;
     height: 200px;

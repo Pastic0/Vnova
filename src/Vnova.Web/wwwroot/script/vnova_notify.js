@@ -15,7 +15,7 @@
     if (stack) return stack;
     stack = document.createElement("div");
     stack.id = STACK_ID;
-    stack.className = "VNN-notify-stack";
+    stack.className = "twai-notify-stack";
     stack.setAttribute("aria-live", "polite");
     stack.setAttribute("aria-label", "Thông báo Vnova");
     document.body.appendChild(stack);
@@ -46,12 +46,12 @@
     ready(() => localizeText(source, (text) => {
       const stack = ensureStack();
       const item = document.createElement("div");
-      item.className = `VNN-notify-item ${normalizeType(type)}`;
+      item.className = `twai-notify-item ${normalizeType(type)}`;
       item.innerHTML = `
-        <div class="VNN-notify-dot" aria-hidden="true"></div>
-        <div class="VNN-notify-message"></div>
+        <div class="twai-notify-dot" aria-hidden="true"></div>
+        <div class="twai-notify-message"></div>
       `;
-      item.querySelector(".VNN-notify-message").textContent = text;
+      item.querySelector(".twai-notify-message").textContent = text;
       item.setAttribute("role", "status");
       item.setAttribute("tabindex", "0");
       item.setAttribute("aria-label", `${text}. ${window.VnovaLanguage?.get?.() === "en" ? "Click to dismiss." : "Bấm để đóng thông báo."}`);
@@ -98,24 +98,24 @@
 
         const dialog = document.createElement("div");
         dialog.id = DIALOG_ID;
-        dialog.className = "VNN-notify-dialog";
+        dialog.className = "twai-notify-dialog";
         const isPrompt = config.mode === "prompt";
         dialog.innerHTML = `
-          <div class="VNN-notify-card" role="dialog" aria-modal="true" aria-labelledby="VNNNotifyTitle">
-            <button class="VNN-notify-x" type="button" aria-label="Đóng">×</button>
-            <div class="VNN-notify-title" id="VNNNotifyTitle">${isPrompt ? "Nhập thông tin" : "Xác nhận"}</div>
-            <div class="VNN-notify-text"></div>
-            ${isPrompt ? '<input class="VNN-notify-input" type="text" autocomplete="off" />' : ""}
-            <div class="VNN-notify-actions">
-              <button class="VNN-notify-btn soft" type="button" data-action="cancel">Hủy</button>
-              <button class="VNN-notify-btn primary" type="button" data-action="ok">${isPrompt ? "Lưu" : "Đồng ý"}</button>
+          <div class="twai-notify-card" role="dialog" aria-modal="true" aria-labelledby="twaiNotifyTitle">
+            <button class="twai-notify-x" type="button" aria-label="Đóng">×</button>
+            <div class="twai-notify-title" id="twaiNotifyTitle">${isPrompt ? "Nhập thông tin" : "Xác nhận"}</div>
+            <div class="twai-notify-text"></div>
+            ${isPrompt ? '<input class="twai-notify-input" type="text" autocomplete="off" />' : ""}
+            <div class="twai-notify-actions">
+              <button class="twai-notify-btn soft" type="button" data-action="cancel">Hủy</button>
+              <button class="twai-notify-btn primary" type="button" data-action="ok">${isPrompt ? "Lưu" : "Đồng ý"}</button>
             </div>
           </div>
         `;
-        dialog.querySelector(".VNN-notify-text").textContent = String(config.message || "").trim();
+        dialog.querySelector(".twai-notify-text").textContent = String(config.message || "").trim();
         document.body.appendChild(dialog);
 
-        const input = dialog.querySelector(".VNN-notify-input");
+        const input = dialog.querySelector(".twai-notify-input");
         if (input) {
           input.value = config.defaultValue || "";
           input.addEventListener("keydown", (event) => {
@@ -126,7 +126,7 @@
 
         dialog.querySelector("[data-action='cancel']").addEventListener("click", () => closeDialog(resolve, isPrompt ? null : false));
         dialog.querySelector("[data-action='ok']").addEventListener("click", () => closeDialog(resolve, isPrompt ? (input?.value || "") : true));
-        dialog.querySelector(".VNN-notify-x").addEventListener("click", () => closeDialog(resolve, isPrompt ? null : false));
+        dialog.querySelector(".twai-notify-x").addEventListener("click", () => closeDialog(resolve, isPrompt ? null : false));
         dialog.addEventListener("click", (event) => {
           if (event.target === dialog) closeDialog(resolve, isPrompt ? null : false);
         });
