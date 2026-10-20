@@ -169,7 +169,7 @@ function calculatePlanPrice(role, months, source) {
 }
 
 function buildQrUrl(amount, paymentContent) {
-  const info = encodeURIComponent(String(paymentContent || "TWAI").trim());
+  const info = encodeURIComponent(String(paymentContent || "VNN").trim());
   const accountName = encodeURIComponent(PLAN_ACCOUNT_NAME);
   return `https://img.vietqr.io/image/${PLAN_BANK_CODE}-${PLAN_ACCOUNT_NUMBER}-compact2.png?amount=${Math.round(Number(amount || 0))}&addInfo=${info}&accountName=${accountName}`;
 }
@@ -351,7 +351,7 @@ function renderPlanPaymentBox(price, payment) {
   const bank = PLAN_BANK_CODE;
   const account = PLAN_ACCOUNT_NUMBER;
   const accountName = PLAN_ACCOUNT_NAME;
-  const content = getValue(payment, "paymentContent", "payment_content", "paymentCode", "payment_code") || `TWAI${String(orderId).replace(/[^a-z0-9]/gi, "").slice(0, 20).toUpperCase()}`;
+  const content = getValue(payment, "paymentContent", "payment_content", "paymentCode", "payment_code") || `VNN${String(orderId).replace(/[^a-z0-9]/gi, "").slice(0, 20).toUpperCase()}`;
   const qr = buildQrUrl(price.total, content);
   const expiresAt = getValue(payment, "expiresAt", "expires_at") || checkoutPlanOrderExpiresAt;
   return `<div class="checkout-bank-card">

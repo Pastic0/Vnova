@@ -887,7 +887,7 @@
           : `Gửi câu hỏi cho ${managerConfig.displayName}`;
     }
     if (input) input.disabled = isSending;
-    document.querySelectorAll("#supportAdminForm .twai-chatbot-suggestion").forEach((suggestion) => {
+    document.querySelectorAll("#supportAdminForm .VNN-chatbot-suggestion").forEach((suggestion) => {
       suggestion.disabled = isSending;
     });
   }
@@ -1114,7 +1114,7 @@
     const media = String(file.type || "").startsWith("video/")
       ? `<video src="${escapeHtml(objectUrl)}" preload="metadata" muted playsinline></video>`
       : `<img src="${escapeHtml(objectUrl)}" alt="${escapeHtml(file.name || "Ảnh đính kèm")}" />`;
-    return `<div class="twai-chatbot-media-preview-item">${media}<strong>${escapeHtml(file.name || "Tệp")}</strong><button type="button" data-ai-media-remove="${index}" aria-label="Xóa tệp" title="Xóa tệp"><span data-interface-icon="trash-2"></span></button></div>`;
+    return `<div class="VNN-chatbot-media-preview-item">${media}<strong>${escapeHtml(file.name || "Tệp")}</strong><button type="button" data-ai-media-remove="${index}" aria-label="Xóa tệp" title="Xóa tệp"><span data-interface-icon="trash-2"></span></button></div>`;
   }
 
   function renderSelectedAiMedia() {
@@ -1608,9 +1608,9 @@
     const update = () => {
       const inset = Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop));
       const keyboardOpen = inset > 80;
-      root.style.setProperty("--twai-kb-inset", keyboardOpen ? `${inset}px` : "0px");
-      root.style.setProperty("--twai-vv-h", `${Math.round(vv.height)}px`);
-      root.classList.toggle("twai-kb-open", keyboardOpen);
+      root.style.setProperty("--VNN-kb-inset", keyboardOpen ? `${inset}px` : "0px");
+      root.style.setProperty("--VNN-vv-h", `${Math.round(vv.height)}px`);
+      root.classList.toggle("VNN-kb-open", keyboardOpen);
     };
     vv.addEventListener("resize", update);
     vv.addEventListener("scroll", update);
@@ -1642,7 +1642,7 @@
       cancelActiveAiJob(event);
     });
 
-    document.querySelectorAll("#supportAdminForm .twai-chatbot-suggestion").forEach((button) => {
+    document.querySelectorAll("#supportAdminForm .VNN-chatbot-suggestion").forEach((button) => {
       button.addEventListener("click", fillFloatingAiSuggestion);
     });
 

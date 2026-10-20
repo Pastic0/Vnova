@@ -144,23 +144,23 @@
     if (modal) return modal;
     modal = document.createElement("div");
     modal.id = "vnovaPricingPopup";
-    modal.className = "twai-pricing-popup";
+    modal.className = "VNN-pricing-popup";
     modal.setAttribute("aria-hidden", "true");
     modal.innerHTML = `
-      <div class="twai-pricing-popup-card" role="dialog" aria-modal="true" aria-labelledby="twaiPricingPopupTitle">
-        <div class="twai-pricing-heading" hidden>
+      <div class="VNN-pricing-popup-card" role="dialog" aria-modal="true" aria-labelledby="VNNPricingPopupTitle">
+        <div class="VNN-pricing-heading" hidden>
           <span class="eyebrow"></span>
-          <h2 id="twaiPricingPopupTitle"></h2>
-          <p id="twaiPricingPopupReason"></p>
+          <h2 id="VNNPricingPopupTitle"></h2>
+          <p id="VNNPricingPopupReason"></p>
         </div>
-        <div class="twai-pricing-grid" id="twaiPricingPopupGrid"></div>
-        <div class="twai-pricing-footer">
-          <button class="twai-pricing-bottom-close" type="button">Đóng</button>
+        <div class="VNN-pricing-grid" id="VNNPricingPopupGrid"></div>
+        <div class="VNN-pricing-footer">
+          <button class="VNN-pricing-bottom-close" type="button">Đóng</button>
         </div>
       </div>`;
     document.body.appendChild(modal);
     modal.addEventListener("click", function (event) {
-      if (event.target === modal || event.target.closest(".twai-pricing-bottom-close")) closePricingPopup();
+      if (event.target === modal || event.target.closest(".VNN-pricing-bottom-close")) closePricingPopup();
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && modal.classList.contains("open")) closePricingPopup();
@@ -192,7 +192,7 @@
   }
 
   function renderPlans(plans) {
-    const grid = document.getElementById("twaiPricingPopupGrid");
+    const grid = document.getElementById("VNNPricingPopupGrid");
     if (!grid) return;
     grid.innerHTML = plans.map((plan) => {
       const role = normalizeRole(plan.role);
@@ -201,11 +201,11 @@
       const businessReturn = buildBusinessApplicationReturn(planDisplayRole(plan));
       const ctaText = escapeHtml(plan.cta || "Đăng ký");
       const actionHtml = role === "sales" || role === "company"
-        ? `<button class="twai-price-cta ${selected ? "primary" : ""}" type="button" data-auth-required="true" data-auth-return="${escapeHtml(businessReturn)}" data-business-application-plan="${escapeHtml(planDisplayRole(plan))}">${ctaText} →</button>`
-        : `<a class="twai-price-cta ${selected ? "primary" : ""}" href="${escapeHtml(targetHref)}" data-auth-required="true" data-auth-return="${escapeHtml(targetHref)}">${ctaText} →</a>`;
+        ? `<button class="VNN-price-cta ${selected ? "primary" : ""}" type="button" data-auth-required="true" data-auth-return="${escapeHtml(businessReturn)}" data-business-application-plan="${escapeHtml(planDisplayRole(plan))}">${ctaText} →</button>`
+        : `<a class="VNN-price-cta ${selected ? "primary" : ""}" href="${escapeHtml(targetHref)}" data-auth-required="true" data-auth-return="${escapeHtml(targetHref)}">${ctaText} →</a>`;
       return `
-        <article class="twai-price-card twai-price-card-${escapeHtml(role)} ${selected ? "is-featured" : ""}">
-          ${selected ? `<span class="twai-price-ribbon">PHỔ BIẾN</span>` : ""}
+        <article class="VNN-price-card VNN-price-card-${escapeHtml(role)} ${selected ? "is-featured" : ""}">
+          ${selected ? `<span class="VNN-price-ribbon">PHỔ BIẾN</span>` : ""}
           <h3>${escapeHtml(plan.name)}</h3>
           <strong>${escapeHtml(plan.price)}</strong>
           <ul>${plan.benefits.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
@@ -216,7 +216,7 @@
 
   async function openPricingPopup(reason) {
     const modal = ensureModal();
-    const reasonBox = document.getElementById("twaiPricingPopupReason");
+    const reasonBox = document.getElementById("VNNPricingPopupReason");
     if (reasonBox) reasonBox.textContent = reason || "";
     renderPlans(planCache || DEFAULT_PLANS);
     modal.classList.add("open");

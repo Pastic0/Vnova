@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-image: var(--twai-page-bg-image);
+  background-image: var(--VNN-page-bg-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -3192,7 +3192,7 @@ body .content {
 }
 
 .province-side-panel:empty::before {
-  content: var(--twai-map-empty-hint, "Bấm vào một tỉnh trên bản đồ để xem thông tin");
+  content: var(--VNN-map-empty-hint, "Bấm vào một tỉnh trên bản đồ để xem thông tin");
   height: 100%;
   display: flex;
   align-items: center;
@@ -4130,11 +4130,11 @@ body .content {
 
 .memory-image > video, .memory-photo-grid-item video, .memory-add-panel .photo-preview-item video { width:100%; height:100%; object-fit:cover; display:block; background:#020617; }
 
-html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on the map to view details"; }
+html[data-vnova-language="en"] { --VNN-map-empty-hint: "Select a province on the map to view details"; }
 
 
-.province-info-panel .province-ask-ai-btn.twai-ai-icon-button {
-  --twai-ai-button-size: 42px;
+.province-info-panel .province-ask-ai-btn.VNN-ai-icon-button {
+  --VNN-ai-button-size: 42px;
   flex: 0 0 42px !important;
   border: 1px solid rgba(196, 181, 253, .56) !important;
   border-radius: 13px !important;
@@ -4142,8 +4142,8 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
   box-shadow: 0 10px 22px rgba(79, 70, 229, .24) !important;
 }
 
-.festival-calendar-ask-ai-btn.twai-ai-icon-button {
-  --twai-ai-button-size: 34px;
+.festival-calendar-ask-ai-btn.VNN-ai-icon-button {
+  --VNN-ai-button-size: 34px;
   flex: 0 0 34px !important;
   border: 1px solid rgba(196, 181, 253, .56) !important;
   border-radius: 10px !important;
@@ -4153,7 +4153,7 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
 }
 
 @media (max-width: 640px) {
-  .province-info-panel .province-ask-ai-btn.twai-ai-icon-button {
+  .province-info-panel .province-ask-ai-btn.VNN-ai-icon-button {
     width: 42px !important;
     min-width: 42px !important;
     height: 42px !important;
@@ -4171,8 +4171,8 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
 
 
 /* Province information: show the Hỏi AI label after the icon. */
-.province-info-panel .province-ask-ai-btn.twai-ai-icon-button {
-  --twai-ai-button-size: 42px;
+.province-info-panel .province-ask-ai-btn.VNN-ai-icon-button {
+  --VNN-ai-button-size: 42px;
   width: auto !important;
   min-width: 108px !important;
   height: 42px !important;
@@ -4191,7 +4191,7 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
   white-space: nowrap;
 }
 @media (max-width: 640px) {
-  .province-info-panel .province-ask-ai-btn.twai-ai-icon-button {
+  .province-info-panel .province-ask-ai-btn.VNN-ai-icon-button {
     width: 100% !important;
     min-width: 0 !important;
     margin-left: 0 !important;
@@ -4199,8 +4199,8 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
 }
 
 /* Keep the province Hỏi AI action shaped like Xem chi tiết, but use the shared AI color. */
-.province-info-panel .read-more-btn.province-ask-ai-btn.twai-ai-icon-button {
-  --twai-ai-button-size: auto;
+.province-info-panel .read-more-btn.province-ask-ai-btn.VNN-ai-icon-button {
+  --VNN-ai-button-size: auto;
   width: auto !important;
   min-width: 0 !important;
   height: 42px !important;
@@ -4216,19 +4216,19 @@ html[data-vnova-language="en"] { --twai-map-empty-hint: "Select a province on th
   overflow: visible !important;
 }
 
-.province-info-panel .read-more-btn.province-ask-ai-btn.twai-ai-icon-button:hover:not(:disabled),
-.province-info-panel .read-more-btn.province-ask-ai-btn.twai-ai-icon-button:focus-visible:not(:disabled) {
+.province-info-panel .read-more-btn.province-ask-ai-btn.VNN-ai-icon-button:hover:not(:disabled),
+.province-info-panel .read-more-btn.province-ask-ai-btn.VNN-ai-icon-button:focus-visible:not(:disabled) {
   transform: translateY(-1px) !important;
   filter: brightness(1.07) !important;
   box-shadow: 0 13px 28px rgba(79, 70, 229, .31) !important;
 }
 
-.province-info-panel .read-more-btn.province-ask-ai-btn.twai-ai-icon-button:active:not(:disabled) {
+.province-info-panel .read-more-btn.province-ask-ai-btn.VNN-ai-icon-button:active:not(:disabled) {
   transform: translateY(0) !important;
 }
 
 @media (max-width: 640px) {
-  .province-info-panel .read-more-btn.province-ask-ai-btn.twai-ai-icon-button {
+  .province-info-panel .read-more-btn.province-ask-ai-btn.VNN-ai-icon-button {
     width: 100% !important;
     min-width: 0 !important;
     height: 40px !important;

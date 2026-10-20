@@ -286,7 +286,7 @@
   async function flushQueue() {
     if (processing || currentLanguage !== "en" || pending.size === 0) return;
     processing = true;
-    document.documentElement.classList.add("twai-language-translating");
+    document.documentElement.classList.add("VNN-language-translating");
     try {
       while (pending.size && currentLanguage === "en") {
         const batch = [];
@@ -331,7 +331,7 @@
       }
     } finally {
       processing = false;
-      document.documentElement.classList.remove("twai-language-translating");
+      document.documentElement.classList.remove("VNN-language-translating");
       if (pending.size && currentLanguage === "en") flushQueue();
     }
   }
@@ -503,14 +503,14 @@
     if (!document.getElementById("vnovaLanguageToggle")) {
       const button = document.createElement("button");
       button.id = "vnovaLanguageToggle";
-      button.className = "twai-theme-toggle twai-tool-action twai-language-choice active";
+      button.className = "VNN-theme-toggle VNN-tool-action VNN-language-choice active";
       button.type = "button";
       button.setAttribute("data-no-translate", "");
       host.insertBefore(button, document.getElementById("vnovaThemeToggle") || null);
     }
 
     const button = document.getElementById("vnovaLanguageToggle");
-    button?.style.setProperty("--twai-tool-index", "2");
+    button?.style.setProperty("--VNN-tool-index", "2");
     updateButton();
   }
 

@@ -188,7 +188,7 @@
 
     const versionedUrl = getBackgroundUrl(normalizedTheme);
     document.documentElement.style.setProperty(
-      normalizedTheme === "dark" ? "--twai-page-bg-dark" : "--twai-page-bg-light",
+      normalizedTheme === "dark" ? "--VNN-page-bg-dark" : "--VNN-page-bg-light",
       toCssUrl(versionedUrl)
     );
 

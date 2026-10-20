@@ -372,7 +372,7 @@ function renderPostActionButton(kind, onClick, text, extraClass = "") {
   const actionClass = kind === "delete"
     ? "post-delete-action-button"
     : (kind === "edit" ? "post-edit-action-button" : (kind === "ai" ? "post-ai-action-button" : "post-view-action-button"));
-  const classes = [className, actionClass, "post-card-icon-button", kind === "ai" ? "twai-ai-icon-button" : "", extraClass].filter(Boolean).join(" ");
+  const classes = [className, actionClass, "post-card-icon-button", kind === "ai" ? "VNN-ai-icon-button" : "", extraClass].filter(Boolean).join(" ");
   const askAiAttribute = kind === "ai" ? ' data-vnova-ask-ai="true"' : "";
   return `<button class="${classes}" type="button" onclick="${onClick}"${askAiAttribute} title="${escapeHtml(text)}" aria-label="${escapeHtml(text)}">${icon}</button>`;
 }

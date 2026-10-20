@@ -25,7 +25,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--twai-page-bg-image);
+  background-image: var(--VNN-page-bg-image);
   height: 100vh;
 }
 
@@ -820,7 +820,7 @@ header {
   border-radius: 30px;
   background:
     linear-gradient(140deg, rgba(125,211,252,.34), rgba(255,255,255,.06)),
-    var(--twai-page-bg-image) center/cover no-repeat;
+    var(--VNN-page-bg-image) center/cover no-repeat;
   box-shadow: inset 0 -80px 110px rgba(2,6,23,.46);
 }
 
@@ -1046,7 +1046,7 @@ header {
   overflow: hidden;
   background:
     linear-gradient(120deg, rgba(2,6,23,.22), rgba(2,6,23,.82)),
-    var(--twai-page-bg-image) center/cover no-repeat;
+    var(--VNN-page-bg-image) center/cover no-repeat;
   border: 1px solid rgba(255,255,255,.18);
   box-shadow: 0 34px 90px rgba(0,0,0,.34);
 }
@@ -1413,7 +1413,7 @@ header {
   border-radius: 34px;
   background:
     linear-gradient(150deg, rgba(8, 47, 73, .3), rgba(2, 6, 23, .62)),
-    var(--twai-page-bg-image) center/cover no-repeat;
+    var(--VNN-page-bg-image) center/cover no-repeat;
   box-shadow: inset 0 -90px 120px rgba(2,6,23,.58);
   overflow: hidden;
 }
@@ -1587,7 +1587,7 @@ header {
   border-radius: 44px;
   background:
     linear-gradient(140deg, rgba(2,6,23,.10), rgba(2,6,23,.82)),
-    var(--twai-page-bg-image) center/cover no-repeat;
+    var(--VNN-page-bg-image) center/cover no-repeat;
   border: 1px solid rgba(255,255,255,.17);
   box-shadow: 0 30px 86px rgba(0,0,0,.34);
   overflow: hidden;
@@ -1708,9 +1708,9 @@ header {
   }
 }
 .landing-culture-page {
-  --landing-title-size: var(--twai-page-title-size, clamp(2rem, 5vw, 3.2rem));
-  --landing-title-line: var(--twai-page-title-line, 1.08);
-  --landing-title-spacing: var(--twai-page-title-spacing, -0.035em);
+  --landing-title-size: var(--VNN-page-title-size, clamp(2rem, 5vw, 3.2rem));
+  --landing-title-line: var(--VNN-page-title-line, 1.08);
+  --landing-title-spacing: var(--VNN-page-title-spacing, -0.035em);
 }
 
 .landing-culture-page .landing-header {
@@ -2307,7 +2307,7 @@ header {
   padding: 28px;
   border-radius: 28px;
   overflow: hidden;
-  background: linear-gradient(rgba(2,6,23,.28), rgba(2,6,23,.52)), var(--twai-page-bg-image) center/cover no-repeat;
+  background: linear-gradient(rgba(2,6,23,.28), rgba(2,6,23,.52)), var(--VNN-page-bg-image) center/cover no-repeat;
   box-shadow: 0 22px 60px rgba(0,0,0,.28);
 }
 
@@ -2957,7 +2957,7 @@ body {
   border-radius: 28px;
   background:
     linear-gradient(145deg, rgba(2,6,23,.20), rgba(2,6,23,.66)),
-    var(--twai-page-bg-image) center/cover no-repeat;
+    var(--VNN-page-bg-image) center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -4228,7 +4228,7 @@ body {
 }
 
 
-.twai-pricing-popup {
+.VNN-pricing-popup {
   position: fixed;
   inset: 0;
   display: none;
@@ -4239,8 +4239,8 @@ body {
   backdrop-filter: blur(16px) saturate(1.08);
   -webkit-backdrop-filter: blur(16px) saturate(1.08);
 }
-.twai-pricing-popup.open { display: grid; }
-.twai-pricing-popup-card {
+.VNN-pricing-popup.open { display: grid; }
+.VNN-pricing-popup-card {
   position: relative;
   width: min(1280px, 100%);
   max-height: 92vh;
@@ -4251,15 +4251,15 @@ body {
   box-shadow: 0 34px 110px rgba(2, 6, 23, .24);
   padding: clamp(18px, 2.2vw, 30px);
 }
-.twai-pricing-heading { margin: 0 46px 20px 0; color: #0f172a; }
-.twai-pricing-heading h2 { margin: 6px 0 6px; font-size: clamp(26px, 3vw, 42px); }
-.twai-pricing-heading p { margin: 0; color: #64748b; font-weight: 700; }
-.twai-pricing-grid {
+.VNN-pricing-heading { margin: 0 46px 20px 0; color: #0f172a; }
+.VNN-pricing-heading h2 { margin: 6px 0 6px; font-size: clamp(26px, 3vw, 42px); }
+.VNN-pricing-heading p { margin: 0; color: #64748b; font-weight: 700; }
+.VNN-pricing-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(190px, 1fr));
   gap: clamp(14px, 1.4vw, 22px);
 }
-.twai-price-card {
+.VNN-price-card {
   position: relative;
   min-height: 520px;
   border: 1px solid rgba(15, 23, 42, .14);
@@ -4271,8 +4271,8 @@ body {
   flex-direction: column;
   box-shadow: 0 16px 42px rgba(15, 23, 42, .10);
 }
-.twai-price-card.is-featured { border-color: #111827; box-shadow: 0 20px 54px rgba(15, 23, 42, .16); }
-.twai-price-ribbon {
+.VNN-price-card.is-featured { border-color: #111827; box-shadow: 0 20px 54px rgba(15, 23, 42, .16); }
+.VNN-price-ribbon {
   position: absolute;
   top: -15px;
   left: 28px;
@@ -4284,9 +4284,9 @@ body {
   font-weight: 950;
   letter-spacing: .18em;
 }
-.twai-price-card h3 { margin: 6px 0 24px; font-size: 24px; }
-.twai-price-card strong { font-size: clamp(28px, 2.8vw, 42px); line-height: 1; }
-.twai-price-subtitle {
+.VNN-price-card h3 { margin: 6px 0 24px; font-size: 24px; }
+.VNN-price-card strong { font-size: clamp(28px, 2.8vw, 42px); line-height: 1; }
+.VNN-price-subtitle {
   margin: 10px 0 8px;
   color: #94a3b8;
   font-size: 12px;
@@ -4294,8 +4294,8 @@ body {
   text-transform: uppercase;
   font-weight: 900;
 }
-.twai-price-card em { color: #57534e; font-size: 14px; }
-.twai-price-card ul {
+.VNN-price-card em { color: #57534e; font-size: 14px; }
+.VNN-price-card ul {
   margin: 26px 0 28px;
   padding: 24px 0 0 18px;
   border-top: 1px solid rgba(15,23,42,.12);
@@ -4304,8 +4304,8 @@ body {
   color: #475569;
   line-height: 1.45;
 }
-.twai-price-card li::marker { color: #16a34a; }
-.twai-price-cta {
+.VNN-price-card li::marker { color: #16a34a; }
+.VNN-price-cta {
   margin-top: auto;
   min-height: 48px;
   border-radius: 999px;
@@ -4319,7 +4319,7 @@ body {
   color: #111827;
   font-weight: 950;
 }
-.twai-price-cta.primary { background: #111827; color: #fff; border-color: #111827; }
+.VNN-price-cta.primary { background: #111827; color: #fff; border-color: #111827; }
 .account-plan-settings-table textarea {
   min-height: 84px;
   resize: vertical;
@@ -4336,11 +4336,11 @@ body {
   outline: none;
 }
 .account-plan-settings-table small { color: #94a3b8; }
-@media (max-width: 1180px) { .twai-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .twai-pricing-grid { grid-template-columns: 1fr; } .twai-price-card { min-height: auto; } }
+@media (max-width: 1180px) { .VNN-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .VNN-pricing-grid { grid-template-columns: 1fr; } .VNN-price-card { min-height: auto; } }
 
 
-.twai-pricing-popup {
+.VNN-pricing-popup {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -4348,7 +4348,7 @@ body {
   justify-items: center !important;
   padding: 18px !important;
 }
-.twai-pricing-popup-card {
+.VNN-pricing-popup-card {
   width: min(1080px, calc(100vw - 28px)) !important;
   max-height: 90vh !important;
   border-radius: 22px !important;
@@ -4356,68 +4356,68 @@ body {
   background: rgba(255, 255, 255, .98) !important;
   box-shadow: 0 18px 56px rgba(15, 23, 42, .18) !important;
 }
-.twai-pricing-heading {
+.VNN-pricing-heading {
   margin: 0 42px 14px 0 !important;
 }
-.twai-pricing-heading .eyebrow {
+.VNN-pricing-heading .eyebrow {
   font-size: 11px !important;
   letter-spacing: .14em !important;
 }
-.twai-pricing-heading h2 {
+.VNN-pricing-heading h2 {
   margin: 4px 0 !important;
   font-size: clamp(20px, 2.1vw, 28px) !important;
   line-height: 1.18 !important;
 }
-.twai-pricing-heading p {
+.VNN-pricing-heading p {
   font-size: 13px !important;
   line-height: 1.35 !important;
 }
-.twai-pricing-grid {
+.VNN-pricing-grid {
   display: grid !important;
   grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
   gap: 14px !important;
   align-items: stretch !important;
 }
-.twai-price-card {
+.VNN-price-card {
   grid-column: span 2 !important;
   min-height: 0 !important;
   border-radius: 18px !important;
   padding: 18px !important;
   box-shadow: 0 10px 26px rgba(15, 23, 42, .08) !important;
 }
-.twai-price-card-sales {
+.VNN-price-card-sales {
   grid-column: 2 / span 2 !important;
 }
-.twai-price-card-company {
+.VNN-price-card-company {
   grid-column: 4 / span 2 !important;
 }
-.twai-price-card h3 {
+.VNN-price-card h3 {
   margin: 0 0 12px !important;
   font-size: 20px !important;
 }
-.twai-price-card strong {
+.VNN-price-card strong {
   font-size: clamp(24px, 2.1vw, 32px) !important;
 }
-.twai-price-subtitle {
+.VNN-price-subtitle {
   margin: 8px 0 6px !important;
   font-size: 10px !important;
   letter-spacing: .13em !important;
 }
-.twai-price-card em {
+.VNN-price-card em {
   font-size: 13px !important;
 }
-.twai-price-card ul {
+.VNN-price-card ul {
   margin: 16px 0 18px !important;
   padding: 16px 0 0 17px !important;
   gap: 8px !important;
   line-height: 1.35 !important;
   font-size: 14px !important;
 }
-.twai-price-cta {
+.VNN-price-cta {
   min-height: 42px !important;
   font-size: 14px !important;
 }
-.twai-price-ribbon {
+.VNN-price-ribbon {
   top: -12px !important;
   left: 18px !important;
   padding: 5px 12px !important;
@@ -4425,20 +4425,20 @@ body {
   letter-spacing: .13em !important;
 }
 @media (max-width: 900px) {
-  .twai-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-  .twai-price-card,
-  .twai-price-card-sales,
-  .twai-price-card-company { grid-column: auto !important; }
+  .VNN-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .VNN-price-card,
+  .VNN-price-card-sales,
+  .VNN-price-card-company { grid-column: auto !important; }
 }
 @media (max-width: 620px) {
-  .twai-pricing-popup { padding: 10px !important; }
-  .twai-pricing-popup-card { width: calc(100vw - 16px) !important; padding: 14px !important; }
-  .twai-pricing-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
-  .twai-price-card { padding: 14px !important; }
+  .VNN-pricing-popup { padding: 10px !important; }
+  .VNN-pricing-popup-card { width: calc(100vw - 16px) !important; padding: 14px !important; }
+  .VNN-pricing-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .VNN-price-card { padding: 14px !important; }
 }
 
 
-.twai-price-cta[type="button"] {
+.VNN-price-cta[type="button"] {
   width: 100%;
   cursor: pointer;
   font-family: inherit;
@@ -4519,14 +4519,14 @@ body {
   .business-application-card .btn-soft { width: 100%; }
 }
 
-.twai-pricing-footer {
+.VNN-pricing-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 18px;
 }
 
-.twai-pricing-bottom-close {
+.VNN-pricing-bottom-close {
   border: 0;
   border-radius: 999px;
   padding: 10px 28px;
@@ -4538,7 +4538,7 @@ body {
   box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
 }
 
-.twai-pricing-bottom-close:hover {
+.VNN-pricing-bottom-close:hover {
   transform: translateY(-1px);
 }
 
